@@ -1,86 +1,285 @@
 ﻿  callbacks.cpp
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(27,29): error C3861: 'Forward': 식별자를 찾을 수 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(42): message : 컴파일되는 클래스 템플릿 인스턴스화 'EnetFunction<Ret,Args...>'에 대한 참조를 확인하세요.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(27,29): error C2065: 'Forward': 선언되지 않은 식별자입니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Defines.h(5,1): warning C4005: 'ENET_API': 매크로 재정의
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(35): message : 'ENET_API'의 이전 정의를 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(66,28): error C2039: 'shared_ptr': 'std'의 멤버가 아닙니다.
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\list(24): message : 'std' 선언을 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(66,38): error C2061: 구문 오류: 식별자 'shared_ptr'
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(41,28): error C2061: 구문 오류: 식별자 'Ret'
+  (소스 파일 'callbacks.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(41,28):
+      템플릿 인스턴스화 컨텍스트(가장 오래된 인스턴스화 컨텍스트)가
+          C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(12,11):
+          클래스 템플릿 요소 특수화 'ENetFunction::TFunction<void(Args...)>'을(를) 컴파일하는 동안
+          C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(38,15):
+          클래스 템플릿 'ENetFunction::TFunction<void(Args...)>::TMemberCallableImpl'을(를) 컴파일하는 동안
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(43,52): error C2061: 구문 오류: 식별자 'Method'
+  (소스 파일 'callbacks.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(47,17): error C3646: 'Invoke': 알 수 없는 재정의 지정자입니다.
+  (소스 파일 'callbacks.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(47,23): error C2059: 구문 오류: '('
+  (소스 파일 'callbacks.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(48,13): error C2334: '{' 앞에 예기치 않은 토큰이 있습니다. 명백한 함수 본문을 건너뜁니다.
+  (소스 파일 'callbacks.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(55,20): error C3646: 'Func': 알 수 없는 재정의 지정자입니다.
+  (소스 파일 'callbacks.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(55,13): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'callbacks.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(44,41): error C3861: 'Func': 식별자를 찾을 수 없습니다.
+  (소스 파일 'callbacks.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(44,46): error C3861: 'InFunc': 식별자를 찾을 수 없습니다.
+  (소스 파일 'callbacks.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(44,46): error C2065: 'InFunc': 선언되지 않은 식별자입니다.
+  (소스 파일 'callbacks.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Defines.h(5,9): warning C4005: 'ENET_API': 매크로 재정의
+  (소스 파일 'callbacks.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(35,9):
+      'ENET_API'의 이전 정의를 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(59,30): error C3646: 'freeCallback': 알 수 없는 재정의 지정자입니다.
+  (소스 파일 'callbacks.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(59,5): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'callbacks.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(36,21): error C2143: 구문 오류: ';'이(가) '&' 앞에 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(66): message : 컴파일되는 클래스 템플릿 인스턴스화 'ENetIterator<T>'에 대한 참조를 확인하세요.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(36,1): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(36,1): error C2334: '{' 앞에 예기치 않은 토큰이 있습니다. 명백한 함수 본문을 건너뜁니다.
+  (소스 파일 'callbacks.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(36,21):
+      템플릿 인스턴스화 컨텍스트(가장 오래된 인스턴스화 컨텍스트)가
+          C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(18,8):
+          클래스 템플릿 'ENetIterator'을(를) 컴파일하는 동안
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(36,5): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'callbacks.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(36,36): error C2334: '{' 앞에 예기치 않은 토큰이 있습니다. 명백한 함수 본문을 건너뜁니다.
+  (소스 파일 'callbacks.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(41,22): error C2143: 구문 오류: ';'이(가) '++' 앞에 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(41,1): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'callbacks.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(41,5): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'callbacks.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(41,22): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'callbacks.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(47,21): error C2143: 구문 오류: ';'이(가) '&' 앞에 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(47,1): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(47,1): error C2334: '{' 앞에 예기치 않은 토큰이 있습니다. 명백한 함수 본문을 건너뜁니다.
+  (소스 파일 'callbacks.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(47,5): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'callbacks.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(47,36): error C2334: '{' 앞에 예기치 않은 토큰이 있습니다. 명백한 함수 본문을 건너뜁니다.
+  (소스 파일 'callbacks.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(52,22): error C2143: 구문 오류: ';'이(가) '--' 앞에 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(52,1): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'callbacks.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(52,5): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'callbacks.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(52,22): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'callbacks.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,9): error C2065: 'ENetListIterator': 선언되지 않은 식별자입니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,26): error C3878: 구문 오류: 예기치 않은 토큰 '식별자'이(가) 'expression' 다음에 있습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,26): message : 오류 복구를 건너뛰었습니다. '식별자 ( *  . . . this'
+  (소스 파일 'callbacks.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,26): error C3878: 구문 오류: 예기치 않은 토큰 'tmp'이(가) 'expression' 다음에 있습니다.
+  (소스 파일 'callbacks.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,35): error C2760: 구문 오류: 여기서 ')'은(는) 예상치 못한 오류였습니다. 예상된 오류는 ';'였습니다
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,35): error C3878: 구문 오류: 예기치 않은 토큰 ')'이(가) 'expression_statement' 다음에 있습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,35): message : 오류 복구를 건너뛰었습니다. ')'
+  (소스 파일 'callbacks.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,35): error C3878: 구문 오류: 예기치 않은 토큰 ')'이(가) 'expression-statement' 다음에 있습니다.
+  (소스 파일 'callbacks.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(44,16): error C2065: 'tmp': 선언되지 않은 식별자입니다.
+  (소스 파일 'callbacks.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,9): error C2065: 'ENetListIterator': 선언되지 않은 식별자입니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,26): error C3878: 구문 오류: 예기치 않은 토큰 '식별자'이(가) 'expression' 다음에 있습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,26): message : 오류 복구를 건너뛰었습니다. '식별자 ( *  . . . this'
+  (소스 파일 'callbacks.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,26): error C3878: 구문 오류: 예기치 않은 토큰 'tmp'이(가) 'expression' 다음에 있습니다.
+  (소스 파일 'callbacks.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,35): error C2760: 구문 오류: 여기서 ')'은(는) 예상치 못한 오류였습니다. 예상된 오류는 ';'였습니다
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,35): error C3878: 구문 오류: 예기치 않은 토큰 ')'이(가) 'expression_statement' 다음에 있습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,35): message : 오류 복구를 건너뛰었습니다. ')'
+  (소스 파일 'callbacks.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,35): error C3878: 구문 오류: 예기치 않은 토큰 ')'이(가) 'expression-statement' 다음에 있습니다.
+  (소스 파일 'callbacks.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(55,16): error C2065: 'tmp': 선언되지 않은 식별자입니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(198,13): error C2143: 구문 오류: ';'이(가) '*' 앞에 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(198,13): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(198,19): error C2238: ';' 앞에 예기치 않은 토큰이 있습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(392,2): warning C4091: 'typedef ': 변수를 선언하지 않으면 'ENetEvent' 왼쪽은 무시됩니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(395,1): error C2011: 'ENetBuffer': 'struct' 형식 재정의
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(20): message : 'ENetBuffer' 선언을 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.cpp(44,1): error C2556: 'void *enet_free(void *)': 오버로드된 함수가 'void enet_free(void *)'과(와) 반환 형식만 다릅니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(55): message : 'enet_free' 선언을 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.cpp(43,7): error C2040: 'enet_free': 'void *(void *)'의 간접 참조 수준이 'void (void *)'과(와) 다릅니다.
+  (소스 파일 'callbacks.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(89,8): error C2011: 'ENetBuffer': 'struct' 형식 재정의
+  (소스 파일 'callbacks.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(20,8):
+      'ENetBuffer' 선언을 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(95,54): warning C4099: 'ENetPacket': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  (소스 파일 'callbacks.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(52,7):
+      'ENetPacket' 선언을 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(204,8): warning C4099: 'ENetPeer': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  (소스 파일 'callbacks.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(204,8):
+      'ENetPeer' 선언을 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(379,26): error C2079: 'ENetHost::buffers'은(는) 정의되지 않은 struct 'ENetBuffer'을(를) 사용합니다.
+  (소스 파일 'callbacks.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(472,8): warning C4099: 'ENetEvent': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  (소스 파일 'callbacks.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(472,8):
+      'ENetEvent' 선언을 참조하십시오.
+  
   enet.cpp
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Defines.h(5,1): warning C4005: 'ENET_API': 매크로 재정의
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(35): message : 'ENET_API'의 이전 정의를 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(66,28): error C2039: 'shared_ptr': 'std'의 멤버가 아닙니다.
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\list(24): message : 'std' 선언을 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(66,38): error C2061: 구문 오류: 식별자 'shared_ptr'
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(27,29): error C3861: 'Forward': 식별자를 찾을 수 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(42): message : 컴파일되는 클래스 템플릿 인스턴스화 'EnetFunction<Ret,Args...>'에 대한 참조를 확인하세요.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(27,29): error C2065: 'Forward': 선언되지 않은 식별자입니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Defines.h(5,9): warning C4005: 'ENET_API': 매크로 재정의
+  (소스 파일 'enet.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(35,9):
+      'ENET_API'의 이전 정의를 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(59,30): error C3646: 'freeCallback': 알 수 없는 재정의 지정자입니다.
+  (소스 파일 'enet.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(59,5): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'enet.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(41,28): error C2061: 구문 오류: 식별자 'Ret'
+  (소스 파일 'enet.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(41,28):
+      템플릿 인스턴스화 컨텍스트(가장 오래된 인스턴스화 컨텍스트)가
+          C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(12,11):
+          클래스 템플릿 요소 특수화 'ENetFunction::TFunction<void(Args...)>'을(를) 컴파일하는 동안
+          C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(38,15):
+          클래스 템플릿 'ENetFunction::TFunction<void(Args...)>::TMemberCallableImpl'을(를) 컴파일하는 동안
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(43,52): error C2061: 구문 오류: 식별자 'Method'
+  (소스 파일 'enet.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(47,17): error C3646: 'Invoke': 알 수 없는 재정의 지정자입니다.
+  (소스 파일 'enet.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(47,23): error C2059: 구문 오류: '('
+  (소스 파일 'enet.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(48,13): error C2334: '{' 앞에 예기치 않은 토큰이 있습니다. 명백한 함수 본문을 건너뜁니다.
+  (소스 파일 'enet.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(55,20): error C3646: 'Func': 알 수 없는 재정의 지정자입니다.
+  (소스 파일 'enet.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(55,13): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'enet.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(44,41): error C3861: 'Func': 식별자를 찾을 수 없습니다.
+  (소스 파일 'enet.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(44,46): error C3861: 'InFunc': 식별자를 찾을 수 없습니다.
+  (소스 파일 'enet.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(44,46): error C2065: 'InFunc': 선언되지 않은 식별자입니다.
+  (소스 파일 'enet.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(36,21): error C2143: 구문 오류: ';'이(가) '&' 앞에 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(66): message : 컴파일되는 클래스 템플릿 인스턴스화 'ENetIterator<T>'에 대한 참조를 확인하세요.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(36,1): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(36,1): error C2334: '{' 앞에 예기치 않은 토큰이 있습니다. 명백한 함수 본문을 건너뜁니다.
+  (소스 파일 'enet.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(36,21):
+      템플릿 인스턴스화 컨텍스트(가장 오래된 인스턴스화 컨텍스트)가
+          C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(18,8):
+          클래스 템플릿 'ENetIterator'을(를) 컴파일하는 동안
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(36,5): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'enet.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(36,36): error C2334: '{' 앞에 예기치 않은 토큰이 있습니다. 명백한 함수 본문을 건너뜁니다.
+  (소스 파일 'enet.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(41,22): error C2143: 구문 오류: ';'이(가) '++' 앞에 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(41,1): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'enet.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(41,5): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'enet.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(41,22): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'enet.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(47,21): error C2143: 구문 오류: ';'이(가) '&' 앞에 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(47,1): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(47,1): error C2334: '{' 앞에 예기치 않은 토큰이 있습니다. 명백한 함수 본문을 건너뜁니다.
+  (소스 파일 'enet.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(47,5): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'enet.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(47,36): error C2334: '{' 앞에 예기치 않은 토큰이 있습니다. 명백한 함수 본문을 건너뜁니다.
+  (소스 파일 'enet.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(52,22): error C2143: 구문 오류: ';'이(가) '--' 앞에 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(52,1): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'enet.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(52,5): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'enet.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(52,22): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'enet.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,9): error C2065: 'ENetListIterator': 선언되지 않은 식별자입니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,26): error C3878: 구문 오류: 예기치 않은 토큰 '식별자'이(가) 'expression' 다음에 있습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,26): message : 오류 복구를 건너뛰었습니다. '식별자 ( *  . . . this'
+  (소스 파일 'enet.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,26): error C3878: 구문 오류: 예기치 않은 토큰 'tmp'이(가) 'expression' 다음에 있습니다.
+  (소스 파일 'enet.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,35): error C2760: 구문 오류: 여기서 ')'은(는) 예상치 못한 오류였습니다. 예상된 오류는 ';'였습니다
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,35): error C3878: 구문 오류: 예기치 않은 토큰 ')'이(가) 'expression_statement' 다음에 있습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,35): message : 오류 복구를 건너뛰었습니다. ')'
+  (소스 파일 'enet.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,35): error C3878: 구문 오류: 예기치 않은 토큰 ')'이(가) 'expression-statement' 다음에 있습니다.
+  (소스 파일 'enet.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(44,16): error C2065: 'tmp': 선언되지 않은 식별자입니다.
+  (소스 파일 'enet.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,9): error C2065: 'ENetListIterator': 선언되지 않은 식별자입니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,26): error C3878: 구문 오류: 예기치 않은 토큰 '식별자'이(가) 'expression' 다음에 있습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,26): message : 오류 복구를 건너뛰었습니다. '식별자 ( *  . . . this'
+  (소스 파일 'enet.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,26): error C3878: 구문 오류: 예기치 않은 토큰 'tmp'이(가) 'expression' 다음에 있습니다.
+  (소스 파일 'enet.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,35): error C2760: 구문 오류: 여기서 ')'은(는) 예상치 못한 오류였습니다. 예상된 오류는 ';'였습니다
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,35): error C3878: 구문 오류: 예기치 않은 토큰 ')'이(가) 'expression_statement' 다음에 있습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,35): message : 오류 복구를 건너뛰었습니다. ')'
+  (소스 파일 'enet.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,35): error C3878: 구문 오류: 예기치 않은 토큰 ')'이(가) 'expression-statement' 다음에 있습니다.
+  (소스 파일 'enet.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(55,16): error C2065: 'tmp': 선언되지 않은 식별자입니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(198,13): error C2143: 구문 오류: ';'이(가) '*' 앞에 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(198,13): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(198,19): error C2238: ';' 앞에 예기치 않은 토큰이 있습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(392,2): warning C4091: 'typedef ': 변수를 선언하지 않으면 'ENetEvent' 왼쪽은 무시됩니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(395,1): error C2011: 'ENetBuffer': 'struct' 형식 재정의
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(20): message : 'ENetBuffer' 선언을 참조하십시오.
+  (소스 파일 'enet.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(89,8): error C2011: 'ENetBuffer': 'struct' 형식 재정의
+  (소스 파일 'enet.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(20,8):
+      'ENetBuffer' 선언을 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(95,54): warning C4099: 'ENetPacket': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  (소스 파일 'enet.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(52,7):
+      'ENetPacket' 선언을 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(204,8): warning C4099: 'ENetPeer': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  (소스 파일 'enet.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(204,8):
+      'ENetPeer' 선언을 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(379,26): error C2079: 'ENetHost::buffers'은(는) 정의되지 않은 struct 'ENetBuffer'을(를) 사용합니다.
+  (소스 파일 'enet.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(472,8): warning C4099: 'ENetEvent': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  (소스 파일 'enet.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(472,8):
+      'ENetEvent' 선언을 참조하십시오.
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.cpp(90,17): error C4996: 'gethostbyname': Use getaddrinfo() or GetAddrInfoW() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.cpp(102,18): error C4996: 'inet_ntoa': Use inet_ntop() or InetNtop() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.cpp(122,17): error C4996: 'gethostbyaddr': Use getnameinfo() or GetNameInfoW() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
@@ -88,365 +287,1471 @@ C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.cpp(394,42): warning
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.cpp(415,46): warning C4244: '인수': 'SOCKET'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   EnetPorting.cpp
   host.cpp
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Defines.h(5,1): warning C4005: 'ENET_API': 매크로 재정의
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(35): message : 'ENET_API'의 이전 정의를 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(66,28): error C2039: 'shared_ptr': 'std'의 멤버가 아닙니다.
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\list(24): message : 'std' 선언을 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(66,38): error C2061: 구문 오류: 식별자 'shared_ptr'
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(27,29): error C3861: 'Forward': 식별자를 찾을 수 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(42): message : 컴파일되는 클래스 템플릿 인스턴스화 'EnetFunction<Ret,Args...>'에 대한 참조를 확인하세요.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(27,29): error C2065: 'Forward': 선언되지 않은 식별자입니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Defines.h(5,9): warning C4005: 'ENET_API': 매크로 재정의
+  (소스 파일 'host.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(35,9):
+      'ENET_API'의 이전 정의를 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(59,30): error C3646: 'freeCallback': 알 수 없는 재정의 지정자입니다.
+  (소스 파일 'host.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(59,5): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'host.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(41,28): error C2061: 구문 오류: 식별자 'Ret'
+  (소스 파일 'host.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(41,28):
+      템플릿 인스턴스화 컨텍스트(가장 오래된 인스턴스화 컨텍스트)가
+          C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(12,11):
+          클래스 템플릿 요소 특수화 'ENetFunction::TFunction<void(Args...)>'을(를) 컴파일하는 동안
+          C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(38,15):
+          클래스 템플릿 'ENetFunction::TFunction<void(Args...)>::TMemberCallableImpl'을(를) 컴파일하는 동안
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(43,52): error C2061: 구문 오류: 식별자 'Method'
+  (소스 파일 'host.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(47,17): error C3646: 'Invoke': 알 수 없는 재정의 지정자입니다.
+  (소스 파일 'host.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(47,23): error C2059: 구문 오류: '('
+  (소스 파일 'host.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(48,13): error C2334: '{' 앞에 예기치 않은 토큰이 있습니다. 명백한 함수 본문을 건너뜁니다.
+  (소스 파일 'host.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(55,20): error C3646: 'Func': 알 수 없는 재정의 지정자입니다.
+  (소스 파일 'host.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(55,13): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'host.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(44,41): error C3861: 'Func': 식별자를 찾을 수 없습니다.
+  (소스 파일 'host.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(44,46): error C3861: 'InFunc': 식별자를 찾을 수 없습니다.
+  (소스 파일 'host.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(44,46): error C2065: 'InFunc': 선언되지 않은 식별자입니다.
+  (소스 파일 'host.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(36,21): error C2143: 구문 오류: ';'이(가) '&' 앞에 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(66): message : 컴파일되는 클래스 템플릿 인스턴스화 'ENetIterator<T>'에 대한 참조를 확인하세요.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(36,1): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(36,1): error C2334: '{' 앞에 예기치 않은 토큰이 있습니다. 명백한 함수 본문을 건너뜁니다.
+  (소스 파일 'host.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(36,21):
+      템플릿 인스턴스화 컨텍스트(가장 오래된 인스턴스화 컨텍스트)가
+          C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(18,8):
+          클래스 템플릿 'ENetIterator'을(를) 컴파일하는 동안
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(36,5): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'host.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(36,36): error C2334: '{' 앞에 예기치 않은 토큰이 있습니다. 명백한 함수 본문을 건너뜁니다.
+  (소스 파일 'host.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(41,22): error C2143: 구문 오류: ';'이(가) '++' 앞에 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(41,1): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'host.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(41,5): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'host.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(41,22): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'host.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(47,21): error C2143: 구문 오류: ';'이(가) '&' 앞에 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(47,1): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(47,1): error C2334: '{' 앞에 예기치 않은 토큰이 있습니다. 명백한 함수 본문을 건너뜁니다.
+  (소스 파일 'host.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(47,5): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'host.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(47,36): error C2334: '{' 앞에 예기치 않은 토큰이 있습니다. 명백한 함수 본문을 건너뜁니다.
+  (소스 파일 'host.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(52,22): error C2143: 구문 오류: ';'이(가) '--' 앞에 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(52,1): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'host.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(52,5): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'host.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(52,22): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'host.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,9): error C2065: 'ENetListIterator': 선언되지 않은 식별자입니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,26): error C3878: 구문 오류: 예기치 않은 토큰 '식별자'이(가) 'expression' 다음에 있습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,26): message : 오류 복구를 건너뛰었습니다. '식별자 ( *  . . . this'
+  (소스 파일 'host.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,26): error C3878: 구문 오류: 예기치 않은 토큰 'tmp'이(가) 'expression' 다음에 있습니다.
+  (소스 파일 'host.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,35): error C2760: 구문 오류: 여기서 ')'은(는) 예상치 못한 오류였습니다. 예상된 오류는 ';'였습니다
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,35): error C3878: 구문 오류: 예기치 않은 토큰 ')'이(가) 'expression_statement' 다음에 있습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,35): message : 오류 복구를 건너뛰었습니다. ')'
+  (소스 파일 'host.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,35): error C3878: 구문 오류: 예기치 않은 토큰 ')'이(가) 'expression-statement' 다음에 있습니다.
+  (소스 파일 'host.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(44,16): error C2065: 'tmp': 선언되지 않은 식별자입니다.
+  (소스 파일 'host.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,9): error C2065: 'ENetListIterator': 선언되지 않은 식별자입니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,26): error C3878: 구문 오류: 예기치 않은 토큰 '식별자'이(가) 'expression' 다음에 있습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,26): message : 오류 복구를 건너뛰었습니다. '식별자 ( *  . . . this'
+  (소스 파일 'host.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,26): error C3878: 구문 오류: 예기치 않은 토큰 'tmp'이(가) 'expression' 다음에 있습니다.
+  (소스 파일 'host.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,35): error C2760: 구문 오류: 여기서 ')'은(는) 예상치 못한 오류였습니다. 예상된 오류는 ';'였습니다
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,35): error C3878: 구문 오류: 예기치 않은 토큰 ')'이(가) 'expression_statement' 다음에 있습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,35): message : 오류 복구를 건너뛰었습니다. ')'
+  (소스 파일 'host.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,35): error C3878: 구문 오류: 예기치 않은 토큰 ')'이(가) 'expression-statement' 다음에 있습니다.
+  (소스 파일 'host.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(55,16): error C2065: 'tmp': 선언되지 않은 식별자입니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(198,13): error C2143: 구문 오류: ';'이(가) '*' 앞에 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(198,13): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(198,19): error C2238: ';' 앞에 예기치 않은 토큰이 있습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(392,2): warning C4091: 'typedef ': 변수를 선언하지 않으면 'ENetEvent' 왼쪽은 무시됩니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(395,1): error C2011: 'ENetBuffer': 'struct' 형식 재정의
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(20): message : 'ENetBuffer' 선언을 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(121,22): error C2039: 'host': 'ENetPeer'의 멤버가 아닙니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(195): message : 'ENetPeer' 선언을 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(253,36): warning C4267: '인수': 'size_t'에서 'u_long'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'host.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(89,8): error C2011: 'ENetBuffer': 'struct' 형식 재정의
+  (소스 파일 'host.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(20,8):
+      'ENetBuffer' 선언을 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(95,54): warning C4099: 'ENetPacket': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  (소스 파일 'host.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(52,7):
+      'ENetPacket' 선언을 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(204,8): warning C4099: 'ENetPeer': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  (소스 파일 'host.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(204,8):
+      'ENetPeer' 선언을 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(379,26): error C2079: 'ENetHost::buffers'은(는) 정의되지 않은 struct 'ENetBuffer'을(를) 사용합니다.
+  (소스 파일 'host.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(472,8): warning C4099: 'ENetEvent': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  (소스 파일 'host.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(472,8):
+      'ENetEvent' 선언을 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(92,9): error C2679: 이항 '=': 오른쪽 피연산자로 'nullptr' 형식을 사용하는 연산자가 없거나 허용되는 변환이 없습니다.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(222,20):
+      'ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)> &ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)>::operator =(const ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)> &)'일 수 있습니다.
+          C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(92,9):
+          'ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)> &ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)>::operator =(const ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)> &)': 인수 2을(를) 'nullptr'에서 'const ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)> &'(으)로 변환할 수 없습니다.
+              C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(92,22):
+              원인: 'nullptr'에서 'const ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)>'(으)로 변환할 수 없습니다.
+              C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(92,22):
+              'ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)>::TFunction': 모든 인수 형식을 변환할 수 있는 오버로드된 함수가 없습니다.
+                  C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(221,9):
+                  'ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)>::TFunction(const ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)> &)'일 수 있습니다.
+                      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(92,22):
+                      'ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)>::TFunction(const ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)> &)': 인수 1을(를) 'nullptr'에서 'const ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)> &'(으)로 변환할 수 없습니다.
+                          C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(92,22):
+                          원인: 'nullptr'에서 'const ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)>'(으)로 변환할 수 없습니다.
+                          C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(92,22):
+                          변환하려면 둘째 사용자 정의 변환 연산자 또는 생성자가 있어야 합니다.
+                  C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(188,9):
+                  또는       'ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)>::TFunction(void)'
+                      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(92,22):
+                      'ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)>::TFunction': 함수는 1개의 인수를 사용하지 않습니다.
+                  C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(199,9):
+                  또는       'ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)>::TFunction(Class *,Ret (__cdecl Class::* )(const ENetBuffer *,size_t))'
+          with
+          [
+              Ret=enet_uint32
+          ]
+                  C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(192,9):
+                  또는       'ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)>::TFunction(Callable &&)'
+                  C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(92,22):
+                  인수 목록 '(nullptr)'을(를) 일치시키는 동안
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(92,9):
+      인수 목록 '(ENetChecksumCallback, nullptr)'을(를) 일치시키는 동안
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(111,21): error C2679: 이항 '=': 오른쪽 피연산자로 'nullptr' 형식을 사용하는 연산자가 없거나 허용되는 변환이 없습니다.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(222,20):
+      'ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)> &ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::operator =(const ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)> &)'일 수 있습니다.
+          C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(111,21):
+          'ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)> &ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::operator =(const ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)> &)': 인수 2을(를) 'nullptr'에서 'const ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)> &'(으)로 변환할 수 없습니다.
+              C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(111,33):
+              원인: 'nullptr'에서 'const ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>'(으)로 변환할 수 없습니다.
+              C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(111,33):
+              'ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::TFunction': 모든 인수 형식을 변환할 수 있는 오버로드된 함수가 없습니다.
+                  C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(221,9):
+                  'ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::TFunction(const ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)> &)'일 수 있습니다.
+                      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(111,33):
+                      'ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::TFunction(const ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)> &)': 인수 1을(를) 'nullptr'에서 'const ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)> &'(으)로 변환할 수 없습니다.
+                          C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(111,33):
+                          원인: 'nullptr'에서 'const ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>'(으)로 변환할 수 없습니다.
+                          C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(111,33):
+                          변환하려면 둘째 사용자 정의 변환 연산자 또는 생성자가 있어야 합니다.
+                  C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(188,9):
+                  또는       'ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::TFunction(void)'
+                      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(111,33):
+                      'ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::TFunction': 함수는 1개의 인수를 사용하지 않습니다.
+                  C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(199,9):
+                  또는       'ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::TFunction(Class *,Ret (__cdecl Class::* )(void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t))'
+          with
+          [
+              Ret=size_t
+          ]
+                  C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(192,9):
+                  또는       'ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::TFunction(Callable &&)'
+                  C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(111,33):
+                  인수 목록 '(nullptr)'을(를) 일치시키는 동안
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(111,21):
+      인수 목록 '(ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>, nullptr)'을(를) 일치시키는 동안
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(200,9): error C2679: 이항 '=': 오른쪽 피연산자로 'nullptr' 형식을 사용하는 연산자가 없거나 허용되는 변환이 없습니다.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(222,20):
+      'ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)> &ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)>::operator =(const ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)> &)'일 수 있습니다.
+          C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(200,9):
+          'ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)> &ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)>::operator =(const ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)> &)': 인수 2을(를) 'nullptr'에서 'const ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)> &'(으)로 변환할 수 없습니다.
+              C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(200,22):
+              원인: 'nullptr'에서 'const ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)>'(으)로 변환할 수 없습니다.
+              C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(200,22):
+              'ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)>::TFunction': 모든 인수 형식을 변환할 수 있는 오버로드된 함수가 없습니다.
+                  C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(221,9):
+                  'ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)>::TFunction(const ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)> &)'일 수 있습니다.
+                      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(200,22):
+                      'ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)>::TFunction(const ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)> &)': 인수 1을(를) 'nullptr'에서 'const ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)> &'(으)로 변환할 수 없습니다.
+                          C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(200,22):
+                          원인: 'nullptr'에서 'const ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)>'(으)로 변환할 수 없습니다.
+                          C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(200,22):
+                          변환하려면 둘째 사용자 정의 변환 연산자 또는 생성자가 있어야 합니다.
+                  C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(188,9):
+                  또는       'ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)>::TFunction(void)'
+                      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(200,22):
+                      'ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)>::TFunction': 함수는 1개의 인수를 사용하지 않습니다.
+                  C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(199,9):
+                  또는       'ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)>::TFunction(Class *,Ret (__cdecl Class::* )(const ENetBuffer *,size_t))'
+          with
+          [
+              Ret=enet_uint32
+          ]
+                  C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(192,9):
+                  또는       'ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)>::TFunction(Callable &&)'
+                  C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(200,22):
+                  인수 목록 '(nullptr)'을(를) 일치시키는 동안
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(200,9):
+      인수 목록 '(ENetChecksumCallback, nullptr)'을(를) 일치시키는 동안
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(219,21): error C2679: 이항 '=': 오른쪽 피연산자로 'nullptr' 형식을 사용하는 연산자가 없거나 허용되는 변환이 없습니다.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(222,20):
+      'ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)> &ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::operator =(const ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)> &)'일 수 있습니다.
+          C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(219,21):
+          'ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)> &ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::operator =(const ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)> &)': 인수 2을(를) 'nullptr'에서 'const ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)> &'(으)로 변환할 수 없습니다.
+              C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(219,33):
+              원인: 'nullptr'에서 'const ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>'(으)로 변환할 수 없습니다.
+              C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(219,33):
+              'ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::TFunction': 모든 인수 형식을 변환할 수 있는 오버로드된 함수가 없습니다.
+                  C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(221,9):
+                  'ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::TFunction(const ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)> &)'일 수 있습니다.
+                      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(219,33):
+                      'ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::TFunction(const ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)> &)': 인수 1을(를) 'nullptr'에서 'const ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)> &'(으)로 변환할 수 없습니다.
+                          C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(219,33):
+                          원인: 'nullptr'에서 'const ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>'(으)로 변환할 수 없습니다.
+                          C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(219,33):
+                          변환하려면 둘째 사용자 정의 변환 연산자 또는 생성자가 있어야 합니다.
+                  C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(188,9):
+                  또는       'ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::TFunction(void)'
+                      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(219,33):
+                      'ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::TFunction': 함수는 1개의 인수를 사용하지 않습니다.
+                  C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(199,9):
+                  또는       'ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::TFunction(Class *,Ret (__cdecl Class::* )(void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t))'
+          with
+          [
+              Ret=size_t
+          ]
+                  C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(192,9):
+                  또는       'ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::TFunction(Callable &&)'
+                  C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(219,33):
+                  인수 목록 '(nullptr)'을(를) 일치시키는 동안
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(219,21):
+      인수 목록 '(ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>, nullptr)'을(를) 일치시키는 동안
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(363,36): warning C4267: '인수': 'size_t'에서 'u_long'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(411,26): error C2280: 'ENetCompressor &ENetCompressor::operator =(const ENetCompressor &)': 삭제된 함수를 참조하려고 합니다.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(320,1):
+      컴파일러에서 여기에 'ENetCompressor::operator ='을(를) 생성했습니다.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(320,1):
+      'ENetCompressor &ENetCompressor::operator =(const ENetCompressor &)': 데이터 멤버이(가) 삭제되거나 액세스할 수 없는 'ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)> &ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::operator =(const ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)> &)' 함수를 호출하므로 함수가 암시적으로 삭제되었습니다.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(222,20):
+      'ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)> &ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::operator =(const ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)> &)': 데이터 멤버이(가) 삭제되거나 액세스할 수 없는 'std::unique_ptr<ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::ICallable,std::default_delete<ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::ICallable>> &std::unique_ptr<ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::ICallable,std::default_delete<ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::ICallable>>::operator =(const std::unique_ptr<ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::ICallable,std::default_delete<ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::ICallable>> &)' 함수를 호출하므로 함수가 암시적으로 삭제되었습니다.
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3476,17):
+      'std::unique_ptr<ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::ICallable,std::default_delete<ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::ICallable>> &std::unique_ptr<ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::ICallable,std::default_delete<ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::ICallable>>::operator =(const std::unique_ptr<ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::ICallable,std::default_delete<ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::ICallable>> &)': 함수가 명시적으로 삭제되었습니다.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(422,26): error C2280: 'ENetCompressor &ENetCompressor::operator =(const ENetCompressor &)': 삭제된 함수를 참조하려고 합니다.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(320,1):
+      컴파일러에서 여기에 'ENetCompressor::operator ='을(를) 생성했습니다.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(320,1):
+      'ENetCompressor &ENetCompressor::operator =(const ENetCompressor &)': 데이터 멤버이(가) 삭제되거나 액세스할 수 없는 'ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)> &ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::operator =(const ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)> &)' 함수를 호출하므로 함수가 암시적으로 삭제되었습니다.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(222,20):
+      'ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)> &ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::operator =(const ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)> &)': 데이터 멤버이(가) 삭제되거나 액세스할 수 없는 'std::unique_ptr<ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::ICallable,std::default_delete<ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::ICallable>> &std::unique_ptr<ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::ICallable,std::default_delete<ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::ICallable>>::operator =(const std::unique_ptr<ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::ICallable,std::default_delete<ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::ICallable>> &)' 함수를 호출하므로 함수가 암시적으로 삭제되었습니다.
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(3476,17):
+      'std::unique_ptr<ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::ICallable,std::default_delete<ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::ICallable>> &std::unique_ptr<ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::ICallable,std::default_delete<ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::ICallable>>::operator =(const std::unique_ptr<ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::ICallable,std::default_delete<ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::ICallable>> &)': 함수가 명시적으로 삭제되었습니다.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(461,16): error C2084: 'void ENetHost::bandwidth_limit(enet_uint32,enet_uint32)' 함수에 이미 본문이 있습니다.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(431,16):
+      'ENetHost::bandwidth_limit'의 이전 정의를 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(871,20): error C2079: 'buffer'은(는) 정의되지 않은 struct 'ENetBuffer'을(를) 사용합니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(876,26): error C2664: 'int enet_socket_receive(ENetSocket,ENetAddress *,ENetBuffer *,size_t)': 인수 3을(를) '<error type> *'에서 'ENetBuffer *'(으)로 변환할 수 없습니다.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(878,13):
+      가리킨 형식이 관련이 없습니다. 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트가 필요합니다.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(529,29):
+      'enet_socket_receive' 선언을 참조하십시오.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(876,26):
+      인수 목록 '(ENetSocket, ENetAddress *, <error type> *, int)'을(를) 일치시키는 동안
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(996,20): error C2079: 'buffer'은(는) 정의되지 않은 struct 'ENetBuffer'을(를) 사용합니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1006,13): error C2664: 'Ret ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)>::operator ()(const ENetBuffer *,size_t)': 인수 1을(를) '<error type> *'에서 'const ENetBuffer *'(으)로 변환할 수 없습니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1006,13): error C2664:         with
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1006,13): error C2664:         [
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1006,13): error C2664:             Ret=enet_uint32
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1006,13): error C2664:         ]
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1006,22):
+      가리킨 형식이 관련이 없습니다. 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트가 필요합니다.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(204,13):
+      'ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)>::operator ()' 선언을 참조하십시오.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1006,13):
+      인수 목록 '(<error type> *, int)'을(를) 일치시키는 동안
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1014,36): warning C4267: '+=': 'size_t'에서 'enet_uint32'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1225,20): warning C4305: 'return': 'int'에서 'bool'(으)로 잘립니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1232,20): warning C4305: 'return': 'int'에서 'bool'(으)로 잘립니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1391,48): warning C4267: '인수': 'size_t'에서 'u_long'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1424,16): warning C4305: 'return': 'int'에서 'bool'(으)로 잘립니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1496,16): warning C4305: 'return': 'int'에서 'bool'(으)로 잘립니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1507,16): warning C4305: 'return': 'int'에서 'bool'(으)로 잘립니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1514,16): warning C4305: 'return': 'int'에서 'bool'(으)로 잘립니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1517,16): warning C4305: 'return': 'int'에서 'bool'(으)로 잘립니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1528,16): warning C4305: 'return': 'int'에서 'bool'(으)로 잘립니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1535,16): warning C4305: 'return': 'int'에서 'bool'(으)로 잘립니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1538,16): warning C4305: 'return': 'int'에서 'bool'(으)로 잘립니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1550,16): warning C4305: 'return': 'int'에서 'bool'(으)로 잘립니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1557,16): warning C4305: 'return': 'int'에서 'bool'(으)로 잘립니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1584,16): warning C4305: 'return': 'int'에서 'bool'(으)로 잘립니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1689,63): warning C4267: '=': 'size_t'에서 'enet_uint32'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1606,16): warning C4305: 'return': 'int'에서 'bool'(으)로 잘립니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1614,16): warning C4305: 'return': 'int'에서 'bool'(으)로 잘립니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1638,16): warning C4305: 'return': 'int'에서 'bool'(으)로 잘립니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1664,24): warning C4305: 'return': 'int'에서 'bool'(으)로 잘립니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1679,20): warning C4305: 'return': 'int'에서 'bool'(으)로 잘립니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1705,16): warning C4305: 'return': 'int'에서 'bool'(으)로 잘립니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1739,16): warning C4305: 'return': 'int'에서 'bool'(으)로 잘립니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1855,63): warning C4267: '=': 'size_t'에서 'enet_uint32'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1764,16): warning C4305: 'return': 'int'에서 'bool'(으)로 잘립니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1772,16): warning C4305: 'return': 'int'에서 'bool'(으)로 잘립니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1803,16): warning C4305: 'return': 'int'에서 'bool'(으)로 잘립니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1834,24): warning C4305: 'return': 'int'에서 'bool'(으)로 잘립니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1845,20): warning C4305: 'return': 'int'에서 'bool'(으)로 잘립니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1881,5): error C2679: 이항 '=': 오른쪽 피연산자로 'nullptr' 형식을 사용하는 연산자가 없거나 허용되는 변환이 없습니다.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(222,20):
+      'ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)> &ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)>::operator =(const ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)> &)'일 수 있습니다.
+          C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1881,5):
+          'ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)> &ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)>::operator =(const ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)> &)': 인수 2을(를) 'nullptr'에서 'const ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)> &'(으)로 변환할 수 없습니다.
+              C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1881,16):
+              원인: 'nullptr'에서 'const ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)>'(으)로 변환할 수 없습니다.
+              C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1881,16):
+              'ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)>::TFunction': 모든 인수 형식을 변환할 수 있는 오버로드된 함수가 없습니다.
+                  C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(221,9):
+                  'ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)>::TFunction(const ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)> &)'일 수 있습니다.
+                      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1881,16):
+                      'ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)>::TFunction(const ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)> &)': 인수 1을(를) 'nullptr'에서 'const ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)> &'(으)로 변환할 수 없습니다.
+                          C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1881,16):
+                          원인: 'nullptr'에서 'const ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)>'(으)로 변환할 수 없습니다.
+                          C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1881,16):
+                          변환하려면 둘째 사용자 정의 변환 연산자 또는 생성자가 있어야 합니다.
+                  C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(188,9):
+                  또는       'ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)>::TFunction(void)'
+                      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1881,16):
+                      'ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)>::TFunction': 함수는 1개의 인수를 사용하지 않습니다.
+                  C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(199,9):
+                  또는       'ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)>::TFunction(Class *,Ret (__cdecl Class::* )(const ENetBuffer *,size_t))'
+          with
+          [
+              Ret=enet_uint32
+          ]
+                  C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(192,9):
+                  또는       'ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)>::TFunction(Callable &&)'
+                  C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1881,16):
+                  인수 목록 '(nullptr)'을(를) 일치시키는 동안
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1881,5):
+      인수 목록 '(ENetChecksumCallback, nullptr)'을(를) 일치시키는 동안
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1900,15): error C2679: 이항 '=': 오른쪽 피연산자로 'nullptr' 형식을 사용하는 연산자가 없거나 허용되는 변환이 없습니다.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(222,20):
+      'ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)> &ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::operator =(const ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)> &)'일 수 있습니다.
+          C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1900,15):
+          'ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)> &ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::operator =(const ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)> &)': 인수 2을(를) 'nullptr'에서 'const ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)> &'(으)로 변환할 수 없습니다.
+              C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1900,27):
+              원인: 'nullptr'에서 'const ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>'(으)로 변환할 수 없습니다.
+              C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1900,27):
+              'ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::TFunction': 모든 인수 형식을 변환할 수 있는 오버로드된 함수가 없습니다.
+                  C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(221,9):
+                  'ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::TFunction(const ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)> &)'일 수 있습니다.
+                      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1900,27):
+                      'ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::TFunction(const ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)> &)': 인수 1을(를) 'nullptr'에서 'const ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)> &'(으)로 변환할 수 없습니다.
+                          C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1900,27):
+                          원인: 'nullptr'에서 'const ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>'(으)로 변환할 수 없습니다.
+                          C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1900,27):
+                          변환하려면 둘째 사용자 정의 변환 연산자 또는 생성자가 있어야 합니다.
+                  C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(188,9):
+                  또는       'ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::TFunction(void)'
+                      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1900,27):
+                      'ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::TFunction': 함수는 1개의 인수를 사용하지 않습니다.
+                  C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(199,9):
+                  또는       'ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::TFunction(Class *,Ret (__cdecl Class::* )(void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t))'
+          with
+          [
+              Ret=size_t
+          ]
+                  C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(192,9):
+                  또는       'ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::TFunction(Callable &&)'
+                  C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1900,27):
+                  인수 목록 '(nullptr)'을(를) 일치시키는 동안
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\host.cpp(1900,15):
+      인수 목록 '(ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>, nullptr)'을(를) 일치시키는 동안
+  
   list.cpp
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Defines.h(5,1): warning C4005: 'ENET_API': 매크로 재정의
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(35): message : 'ENET_API'의 이전 정의를 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(66,28): error C2039: 'shared_ptr': 'std'의 멤버가 아닙니다.
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\list(24): message : 'std' 선언을 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(66,38): error C2061: 구문 오류: 식별자 'shared_ptr'
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(27,29): error C3861: 'Forward': 식별자를 찾을 수 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(42): message : 컴파일되는 클래스 템플릿 인스턴스화 'EnetFunction<Ret,Args...>'에 대한 참조를 확인하세요.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(27,29): error C2065: 'Forward': 선언되지 않은 식별자입니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Defines.h(5,9): warning C4005: 'ENET_API': 매크로 재정의
+  (소스 파일 'list.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(35,9):
+      'ENET_API'의 이전 정의를 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(59,30): error C3646: 'freeCallback': 알 수 없는 재정의 지정자입니다.
+  (소스 파일 'list.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(59,5): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'list.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(41,28): error C2061: 구문 오류: 식별자 'Ret'
+  (소스 파일 'list.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(41,28):
+      템플릿 인스턴스화 컨텍스트(가장 오래된 인스턴스화 컨텍스트)가
+          C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(12,11):
+          클래스 템플릿 요소 특수화 'ENetFunction::TFunction<void(Args...)>'을(를) 컴파일하는 동안
+          C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(38,15):
+          클래스 템플릿 'ENetFunction::TFunction<void(Args...)>::TMemberCallableImpl'을(를) 컴파일하는 동안
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(43,52): error C2061: 구문 오류: 식별자 'Method'
+  (소스 파일 'list.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(47,17): error C3646: 'Invoke': 알 수 없는 재정의 지정자입니다.
+  (소스 파일 'list.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(47,23): error C2059: 구문 오류: '('
+  (소스 파일 'list.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(48,13): error C2334: '{' 앞에 예기치 않은 토큰이 있습니다. 명백한 함수 본문을 건너뜁니다.
+  (소스 파일 'list.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(55,20): error C3646: 'Func': 알 수 없는 재정의 지정자입니다.
+  (소스 파일 'list.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(55,13): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'list.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(44,41): error C3861: 'Func': 식별자를 찾을 수 없습니다.
+  (소스 파일 'list.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(44,46): error C3861: 'InFunc': 식별자를 찾을 수 없습니다.
+  (소스 파일 'list.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(44,46): error C2065: 'InFunc': 선언되지 않은 식별자입니다.
+  (소스 파일 'list.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(36,21): error C2143: 구문 오류: ';'이(가) '&' 앞에 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(66): message : 컴파일되는 클래스 템플릿 인스턴스화 'ENetIterator<T>'에 대한 참조를 확인하세요.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(36,1): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(36,1): error C2334: '{' 앞에 예기치 않은 토큰이 있습니다. 명백한 함수 본문을 건너뜁니다.
+  (소스 파일 'list.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(36,21):
+      템플릿 인스턴스화 컨텍스트(가장 오래된 인스턴스화 컨텍스트)가
+          C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(18,8):
+          클래스 템플릿 'ENetIterator'을(를) 컴파일하는 동안
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(36,5): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'list.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(36,36): error C2334: '{' 앞에 예기치 않은 토큰이 있습니다. 명백한 함수 본문을 건너뜁니다.
+  (소스 파일 'list.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(41,22): error C2143: 구문 오류: ';'이(가) '++' 앞에 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(41,1): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'list.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(41,5): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'list.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(41,22): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'list.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(47,21): error C2143: 구문 오류: ';'이(가) '&' 앞에 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(47,1): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(47,1): error C2334: '{' 앞에 예기치 않은 토큰이 있습니다. 명백한 함수 본문을 건너뜁니다.
+  (소스 파일 'list.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(47,5): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'list.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(47,36): error C2334: '{' 앞에 예기치 않은 토큰이 있습니다. 명백한 함수 본문을 건너뜁니다.
+  (소스 파일 'list.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(52,22): error C2143: 구문 오류: ';'이(가) '--' 앞에 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(52,1): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'list.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(52,5): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'list.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(52,22): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'list.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,9): error C2065: 'ENetListIterator': 선언되지 않은 식별자입니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,26): error C3878: 구문 오류: 예기치 않은 토큰 '식별자'이(가) 'expression' 다음에 있습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,26): message : 오류 복구를 건너뛰었습니다. '식별자 ( *  . . . this'
+  (소스 파일 'list.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,26): error C3878: 구문 오류: 예기치 않은 토큰 'tmp'이(가) 'expression' 다음에 있습니다.
+  (소스 파일 'list.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,35): error C2760: 구문 오류: 여기서 ')'은(는) 예상치 못한 오류였습니다. 예상된 오류는 ';'였습니다
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,35): error C3878: 구문 오류: 예기치 않은 토큰 ')'이(가) 'expression_statement' 다음에 있습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,35): message : 오류 복구를 건너뛰었습니다. ')'
+  (소스 파일 'list.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,35): error C3878: 구문 오류: 예기치 않은 토큰 ')'이(가) 'expression-statement' 다음에 있습니다.
+  (소스 파일 'list.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(44,16): error C2065: 'tmp': 선언되지 않은 식별자입니다.
+  (소스 파일 'list.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,9): error C2065: 'ENetListIterator': 선언되지 않은 식별자입니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,26): error C3878: 구문 오류: 예기치 않은 토큰 '식별자'이(가) 'expression' 다음에 있습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,26): message : 오류 복구를 건너뛰었습니다. '식별자 ( *  . . . this'
+  (소스 파일 'list.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,26): error C3878: 구문 오류: 예기치 않은 토큰 'tmp'이(가) 'expression' 다음에 있습니다.
+  (소스 파일 'list.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,35): error C2760: 구문 오류: 여기서 ')'은(는) 예상치 못한 오류였습니다. 예상된 오류는 ';'였습니다
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,35): error C3878: 구문 오류: 예기치 않은 토큰 ')'이(가) 'expression_statement' 다음에 있습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,35): message : 오류 복구를 건너뛰었습니다. ')'
+  (소스 파일 'list.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,35): error C3878: 구문 오류: 예기치 않은 토큰 ')'이(가) 'expression-statement' 다음에 있습니다.
+  (소스 파일 'list.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(55,16): error C2065: 'tmp': 선언되지 않은 식별자입니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(198,13): error C2143: 구문 오류: ';'이(가) '*' 앞에 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(198,13): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(198,19): error C2238: ';' 앞에 예기치 않은 토큰이 있습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(392,2): warning C4091: 'typedef ': 변수를 선언하지 않으면 'ENetEvent' 왼쪽은 무시됩니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(395,1): error C2011: 'ENetBuffer': 'struct' 형식 재정의
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(20): message : 'ENetBuffer' 선언을 참조하십시오.
+  (소스 파일 'list.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(89,8): error C2011: 'ENetBuffer': 'struct' 형식 재정의
+  (소스 파일 'list.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(20,8):
+      'ENetBuffer' 선언을 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(95,54): warning C4099: 'ENetPacket': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  (소스 파일 'list.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(52,7):
+      'ENetPacket' 선언을 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(204,8): warning C4099: 'ENetPeer': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  (소스 파일 'list.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(204,8):
+      'ENetPeer' 선언을 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(379,26): error C2079: 'ENetHost::buffers'은(는) 정의되지 않은 struct 'ENetBuffer'을(를) 사용합니다.
+  (소스 파일 'list.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(472,8): warning C4099: 'ENetEvent': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  (소스 파일 'list.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(472,8):
+      'ENetEvent' 선언을 참조하십시오.
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.cpp(75,11): error C2084: 'ENetList::ENetList(void)' 함수에 이미 본문이 있습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(75): message : '{ctor}'의 이전 정의를 참조하십시오.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(75,5):
+      'ENetList::ENetList'의 이전 정의를 참조하십시오.
+  
   Packet.cpp
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(56,30): error C3646: 'flags': 알 수 없는 재정의 지정자입니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(56,35): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'Packet.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(56,5): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'Packet.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(57,15): error C2143: 구문 오류: ';'이(가) '*' 앞에 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(57,15): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'Packet.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(57,5): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'Packet.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(57,34): error C2238: ';' 앞에 예기치 않은 토큰이 있습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(66,28): error C2039: 'shared_ptr': 'std'의 멤버가 아닙니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\predefined C++ types (compiler internal)(342): message : 'std' 선언을 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(66,38): error C2061: 구문 오류: 식별자 'shared_ptr'
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Defines.h(5,1): warning C4005: 'ENET_API': 매크로 재정의
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(35): message : 'ENET_API'의 이전 정의를 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(27,29): error C3861: 'Forward': 식별자를 찾을 수 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(42): message : 컴파일되는 클래스 템플릿 인스턴스화 'EnetFunction<Ret,Args...>'에 대한 참조를 확인하세요.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(27,29): error C2065: 'Forward': 선언되지 않은 식별자입니다.
+  (소스 파일 'Packet.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(59,30): error C3646: 'freeCallback': 알 수 없는 재정의 지정자입니다.
+  (소스 파일 'Packet.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(59,5): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'Packet.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Defines.h(5,9): warning C4005: 'ENET_API': 매크로 재정의
+  (소스 파일 'Packet.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(35,9):
+      'ENET_API'의 이전 정의를 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(41,28): error C2061: 구문 오류: 식별자 'Ret'
+  (소스 파일 'Packet.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(41,28):
+      템플릿 인스턴스화 컨텍스트(가장 오래된 인스턴스화 컨텍스트)가
+          C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(12,11):
+          클래스 템플릿 요소 특수화 'ENetFunction::TFunction<void(Args...)>'을(를) 컴파일하는 동안
+          C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(38,15):
+          클래스 템플릿 'ENetFunction::TFunction<void(Args...)>::TMemberCallableImpl'을(를) 컴파일하는 동안
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(43,52): error C2061: 구문 오류: 식별자 'Method'
+  (소스 파일 'Packet.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(47,17): error C3646: 'Invoke': 알 수 없는 재정의 지정자입니다.
+  (소스 파일 'Packet.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(47,23): error C2059: 구문 오류: '('
+  (소스 파일 'Packet.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(48,13): error C2334: '{' 앞에 예기치 않은 토큰이 있습니다. 명백한 함수 본문을 건너뜁니다.
+  (소스 파일 'Packet.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(55,20): error C3646: 'Func': 알 수 없는 재정의 지정자입니다.
+  (소스 파일 'Packet.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(55,13): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'Packet.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(44,41): error C3861: 'Func': 식별자를 찾을 수 없습니다.
+  (소스 파일 'Packet.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(44,46): error C3861: 'InFunc': 식별자를 찾을 수 없습니다.
+  (소스 파일 'Packet.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(44,46): error C2065: 'InFunc': 선언되지 않은 식별자입니다.
+  (소스 파일 'Packet.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(36,21): error C2143: 구문 오류: ';'이(가) '&' 앞에 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(66): message : 컴파일되는 클래스 템플릿 인스턴스화 'ENetIterator<T>'에 대한 참조를 확인하세요.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(36,1): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(36,1): error C2334: '{' 앞에 예기치 않은 토큰이 있습니다. 명백한 함수 본문을 건너뜁니다.
+  (소스 파일 'Packet.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(36,21):
+      템플릿 인스턴스화 컨텍스트(가장 오래된 인스턴스화 컨텍스트)가
+          C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(18,8):
+          클래스 템플릿 'ENetIterator'을(를) 컴파일하는 동안
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(36,5): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'Packet.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(36,36): error C2334: '{' 앞에 예기치 않은 토큰이 있습니다. 명백한 함수 본문을 건너뜁니다.
+  (소스 파일 'Packet.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(41,22): error C2143: 구문 오류: ';'이(가) '++' 앞에 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(41,1): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'Packet.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(41,5): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'Packet.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(41,22): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'Packet.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(47,21): error C2143: 구문 오류: ';'이(가) '&' 앞에 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(47,1): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(47,1): error C2334: '{' 앞에 예기치 않은 토큰이 있습니다. 명백한 함수 본문을 건너뜁니다.
+  (소스 파일 'Packet.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(47,5): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'Packet.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(47,36): error C2334: '{' 앞에 예기치 않은 토큰이 있습니다. 명백한 함수 본문을 건너뜁니다.
+  (소스 파일 'Packet.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(52,22): error C2143: 구문 오류: ';'이(가) '--' 앞에 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(52,1): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'Packet.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(52,5): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'Packet.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(52,22): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'Packet.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,9): error C2065: 'ENetListIterator': 선언되지 않은 식별자입니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,26): error C3878: 구문 오류: 예기치 않은 토큰 '식별자'이(가) 'expression' 다음에 있습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,26): message : 오류 복구를 건너뛰었습니다. '식별자 ( *  . . . this'
+  (소스 파일 'Packet.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,26): error C3878: 구문 오류: 예기치 않은 토큰 'tmp'이(가) 'expression' 다음에 있습니다.
+  (소스 파일 'Packet.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,35): error C2760: 구문 오류: 여기서 ')'은(는) 예상치 못한 오류였습니다. 예상된 오류는 ';'였습니다
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,35): error C3878: 구문 오류: 예기치 않은 토큰 ')'이(가) 'expression_statement' 다음에 있습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,35): message : 오류 복구를 건너뛰었습니다. ')'
+  (소스 파일 'Packet.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,35): error C3878: 구문 오류: 예기치 않은 토큰 ')'이(가) 'expression-statement' 다음에 있습니다.
+  (소스 파일 'Packet.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(44,16): error C2065: 'tmp': 선언되지 않은 식별자입니다.
+  (소스 파일 'Packet.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,9): error C2065: 'ENetListIterator': 선언되지 않은 식별자입니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,26): error C3878: 구문 오류: 예기치 않은 토큰 '식별자'이(가) 'expression' 다음에 있습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,26): message : 오류 복구를 건너뛰었습니다. '식별자 ( *  . . . this'
+  (소스 파일 'Packet.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,26): error C3878: 구문 오류: 예기치 않은 토큰 'tmp'이(가) 'expression' 다음에 있습니다.
+  (소스 파일 'Packet.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,35): error C2760: 구문 오류: 여기서 ')'은(는) 예상치 못한 오류였습니다. 예상된 오류는 ';'였습니다
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,35): error C3878: 구문 오류: 예기치 않은 토큰 ')'이(가) 'expression_statement' 다음에 있습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,35): message : 오류 복구를 건너뛰었습니다. ')'
+  (소스 파일 'Packet.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,35): error C3878: 구문 오류: 예기치 않은 토큰 ')'이(가) 'expression-statement' 다음에 있습니다.
+  (소스 파일 'Packet.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(55,16): error C2065: 'tmp': 선언되지 않은 식별자입니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(198,13): error C2143: 구문 오류: ';'이(가) '*' 앞에 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(198,13): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(198,19): error C2238: ';' 앞에 예기치 않은 토큰이 있습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(392,2): warning C4091: 'typedef ': 변수를 선언하지 않으면 'ENetEvent' 왼쪽은 무시됩니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(395,1): error C2011: 'ENetBuffer': 'struct' 형식 재정의
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(20): message : 'ENetBuffer' 선언을 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.cpp(49,33): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.cpp(49,15): error C2146: 구문 오류: ';'이(가) 'enet_packet_create' 식별자 앞에 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.cpp(50,1): error C2143: 구문 오류: ';'이(가) '{' 앞에 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.cpp(50,1): error C2447: '{': 함수 헤더가 없습니다. 이전 스타일의 형식 목록입니까?
+  (소스 파일 'Packet.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(89,8): error C2011: 'ENetBuffer': 'struct' 형식 재정의
+  (소스 파일 'Packet.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(20,8):
+      'ENetBuffer' 선언을 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(95,54): warning C4099: 'ENetPacket': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  (소스 파일 'Packet.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(52,7):
+      'ENetPacket' 선언을 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(204,8): warning C4099: 'ENetPeer': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  (소스 파일 'Packet.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(204,8):
+      'ENetPeer' 선언을 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(379,26): error C2079: 'ENetHost::buffers'은(는) 정의되지 않은 struct 'ENetBuffer'을(를) 사용합니다.
+  (소스 파일 'Packet.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(472,8): warning C4099: 'ENetEvent': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  (소스 파일 'Packet.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(472,8):
+      'ENetEvent' 선언을 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.cpp(56,17): error C2039: 'data': 'ENetPacket'의 멤버가 아닙니다.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(52,7):
+      'ENetPacket' 선언을 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.cpp(59,21): error C2039: 'data': 'ENetPacket'의 멤버가 아닙니다.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(52,7):
+      'ENetPacket' 선언을 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.cpp(62,21): error C2039: 'data': 'ENetPacket'의 멤버가 아닙니다.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(52,7):
+      'ENetPacket' 선언을 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.cpp(63,25): error C2039: 'data': 'ENetPacket'의 멤버가 아닙니다.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(52,7):
+      'ENetPacket' 선언을 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.cpp(69,32): error C2039: 'data': 'ENetPacket'의 멤버가 아닙니다.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(52,7):
+      'ENetPacket' 선언을 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.cpp(73,13): error C2039: 'flags': 'ENetPacket'의 멤버가 아닙니다.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(52,7):
+      'ENetPacket' 선언을 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.cpp(75,13): error C2039: 'freeCallback': 'ENetPacket'의 멤버가 아닙니다.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(52,7):
+      'ENetPacket' 선언을 참조하십시오.
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.cpp(86,17): error C2039: 'freeCallback': 'ENetPacket'의 멤버가 아닙니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(52): message : 'ENetPacket' 선언을 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.cpp(87,19): error C2039: 'freeCallback': 'ENetPacket'의 멤버가 아닙니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(52): message : 'ENetPacket' 선언을 참조하십시오.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(52,7):
+      'ENetPacket' 선언을 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.cpp(87,18): error C2039: 'freeCallback': 'ENetPacket'의 멤버가 아닙니다.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(52,7):
+      'ENetPacket' 선언을 참조하십시오.
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.cpp(88,19): error C2039: 'flags': 'ENetPacket'의 멤버가 아닙니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(52): message : 'ENetPacket' 선언을 참조하십시오.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(52,7):
+      'ENetPacket' 선언을 참조하십시오.
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.cpp(89,17): error C2039: 'data': 'ENetPacket'의 멤버가 아닙니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(52): message : 'ENetPacket' 선언을 참조하십시오.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(52,7):
+      'ENetPacket' 선언을 참조하십시오.
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.cpp(90,27): error C2039: 'data': 'ENetPacket'의 멤버가 아닙니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(52): message : 'ENetPacket' 선언을 참조하십시오.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(52,7):
+      'ENetPacket' 선언을 참조하십시오.
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.cpp(98,54): error C2039: 'flags': 'ENetPacket'의 멤버가 아닙니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(52): message : 'ENetPacket' 선언을 참조하십시오.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(52,7):
+      'ENetPacket' 선언을 참조하십시오.
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.cpp(109,17): error C2039: 'data': 'ENetPacket'의 멤버가 아닙니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(52): message : 'ENetPacket' 선언을 참조하십시오.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(52,7):
+      'ENetPacket' 선언을 참조하십시오.
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.cpp(112,37): error C2039: 'data': 'ENetPacket'의 멤버가 아닙니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(52): message : 'ENetPacket' 선언을 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.cpp(112,61): error C2660: 'memcpy': 함수는 2개의 인수를 사용하지 않습니다.
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\vcruntime_string.h(43,15): message : 'memcpy' 선언을 참조하십시오.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(52,7):
+      'ENetPacket' 선언을 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.cpp(112,13): error C2660: 'memcpy': 함수는 2개의 인수를 사용하지 않습니다.
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\vcruntime_string.h(43,15):
+      'memcpy' 선언을 참조하십시오.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.cpp(112,13):
+      인수 목록 '(enet_uint8 *, size_t)'을(를) 일치시키는 동안
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.cpp(114,27): error C2039: 'data': 'ENetPacket'의 멤버가 아닙니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(52): message : 'ENetPacket' 선언을 참조하십시오.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(52,7):
+      'ENetPacket' 선언을 참조하십시오.
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.cpp(117,13): error C2039: 'data': 'ENetPacket'의 멤버가 아닙니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(52): message : 'ENetPacket' 선언을 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.cpp(129,60): error C2027: 정의되지 않은 형식 'ENetBuffer'을(를) 사용했습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(20): message : 'ENetBuffer' 선언을 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.cpp(130,38): error C2027: 정의되지 않은 형식 'ENetBuffer'을(를) 사용했습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(20): message : 'ENetBuffer' 선언을 참조하십시오.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(52,7):
+      'ENetPacket' 선언을 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.cpp(129,53): error C2027: 정의되지 않은 형식 'ENetBuffer'을(를) 사용했습니다.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(20,8):
+      'ENetBuffer' 선언을 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.cpp(130,31): error C2027: 정의되지 않은 형식 'ENetBuffer'을(를) 사용했습니다.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(20,8):
+      'ENetBuffer' 선언을 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.cpp(130,50): error C7732: ']' 앞에 식이 필요합니다.
   peer.cpp
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Defines.h(5,1): warning C4005: 'ENET_API': 매크로 재정의
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(35): message : 'ENET_API'의 이전 정의를 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(66,28): error C2039: 'shared_ptr': 'std'의 멤버가 아닙니다.
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\list(24): message : 'std' 선언을 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(66,38): error C2061: 구문 오류: 식별자 'shared_ptr'
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(27,29): error C3861: 'Forward': 식별자를 찾을 수 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(42): message : 컴파일되는 클래스 템플릿 인스턴스화 'EnetFunction<Ret,Args...>'에 대한 참조를 확인하세요.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(27,29): error C2065: 'Forward': 선언되지 않은 식별자입니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Defines.h(5,9): warning C4005: 'ENET_API': 매크로 재정의
+  (소스 파일 'peer.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(35,9):
+      'ENET_API'의 이전 정의를 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(59,30): error C3646: 'freeCallback': 알 수 없는 재정의 지정자입니다.
+  (소스 파일 'peer.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(59,5): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'peer.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(41,28): error C2061: 구문 오류: 식별자 'Ret'
+  (소스 파일 'peer.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(41,28):
+      템플릿 인스턴스화 컨텍스트(가장 오래된 인스턴스화 컨텍스트)가
+          C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(12,11):
+          클래스 템플릿 요소 특수화 'ENetFunction::TFunction<void(Args...)>'을(를) 컴파일하는 동안
+          C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(38,15):
+          클래스 템플릿 'ENetFunction::TFunction<void(Args...)>::TMemberCallableImpl'을(를) 컴파일하는 동안
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(43,52): error C2061: 구문 오류: 식별자 'Method'
+  (소스 파일 'peer.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(47,17): error C3646: 'Invoke': 알 수 없는 재정의 지정자입니다.
+  (소스 파일 'peer.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(47,23): error C2059: 구문 오류: '('
+  (소스 파일 'peer.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(48,13): error C2334: '{' 앞에 예기치 않은 토큰이 있습니다. 명백한 함수 본문을 건너뜁니다.
+  (소스 파일 'peer.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(55,20): error C3646: 'Func': 알 수 없는 재정의 지정자입니다.
+  (소스 파일 'peer.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(55,13): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'peer.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(44,41): error C3861: 'Func': 식별자를 찾을 수 없습니다.
+  (소스 파일 'peer.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(44,46): error C3861: 'InFunc': 식별자를 찾을 수 없습니다.
+  (소스 파일 'peer.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(44,46): error C2065: 'InFunc': 선언되지 않은 식별자입니다.
+  (소스 파일 'peer.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(36,21): error C2143: 구문 오류: ';'이(가) '&' 앞에 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(66): message : 컴파일되는 클래스 템플릿 인스턴스화 'ENetIterator<T>'에 대한 참조를 확인하세요.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(36,1): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(36,1): error C2334: '{' 앞에 예기치 않은 토큰이 있습니다. 명백한 함수 본문을 건너뜁니다.
+  (소스 파일 'peer.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(36,21):
+      템플릿 인스턴스화 컨텍스트(가장 오래된 인스턴스화 컨텍스트)가
+          C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(18,8):
+          클래스 템플릿 'ENetIterator'을(를) 컴파일하는 동안
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(36,5): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'peer.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(36,36): error C2334: '{' 앞에 예기치 않은 토큰이 있습니다. 명백한 함수 본문을 건너뜁니다.
+  (소스 파일 'peer.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(41,22): error C2143: 구문 오류: ';'이(가) '++' 앞에 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(41,1): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'peer.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(41,5): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'peer.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(41,22): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'peer.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(47,21): error C2143: 구문 오류: ';'이(가) '&' 앞에 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(47,1): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(47,1): error C2334: '{' 앞에 예기치 않은 토큰이 있습니다. 명백한 함수 본문을 건너뜁니다.
+  (소스 파일 'peer.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(47,5): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'peer.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(47,36): error C2334: '{' 앞에 예기치 않은 토큰이 있습니다. 명백한 함수 본문을 건너뜁니다.
+  (소스 파일 'peer.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(52,22): error C2143: 구문 오류: ';'이(가) '--' 앞에 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(52,1): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'peer.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(52,5): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'peer.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(52,22): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'peer.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,9): error C2065: 'ENetListIterator': 선언되지 않은 식별자입니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,26): error C3878: 구문 오류: 예기치 않은 토큰 '식별자'이(가) 'expression' 다음에 있습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,26): message : 오류 복구를 건너뛰었습니다. '식별자 ( *  . . . this'
+  (소스 파일 'peer.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,26): error C3878: 구문 오류: 예기치 않은 토큰 'tmp'이(가) 'expression' 다음에 있습니다.
+  (소스 파일 'peer.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,35): error C2760: 구문 오류: 여기서 ')'은(는) 예상치 못한 오류였습니다. 예상된 오류는 ';'였습니다
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,35): error C3878: 구문 오류: 예기치 않은 토큰 ')'이(가) 'expression_statement' 다음에 있습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,35): message : 오류 복구를 건너뛰었습니다. ')'
+  (소스 파일 'peer.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,35): error C3878: 구문 오류: 예기치 않은 토큰 ')'이(가) 'expression-statement' 다음에 있습니다.
+  (소스 파일 'peer.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(44,16): error C2065: 'tmp': 선언되지 않은 식별자입니다.
+  (소스 파일 'peer.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,9): error C2065: 'ENetListIterator': 선언되지 않은 식별자입니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,26): error C3878: 구문 오류: 예기치 않은 토큰 '식별자'이(가) 'expression' 다음에 있습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,26): message : 오류 복구를 건너뛰었습니다. '식별자 ( *  . . . this'
+  (소스 파일 'peer.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,26): error C3878: 구문 오류: 예기치 않은 토큰 'tmp'이(가) 'expression' 다음에 있습니다.
+  (소스 파일 'peer.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,35): error C2760: 구문 오류: 여기서 ')'은(는) 예상치 못한 오류였습니다. 예상된 오류는 ';'였습니다
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,35): error C3878: 구문 오류: 예기치 않은 토큰 ')'이(가) 'expression_statement' 다음에 있습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,35): message : 오류 복구를 건너뛰었습니다. ')'
+  (소스 파일 'peer.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,35): error C3878: 구문 오류: 예기치 않은 토큰 ')'이(가) 'expression-statement' 다음에 있습니다.
+  (소스 파일 'peer.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(55,16): error C2065: 'tmp': 선언되지 않은 식별자입니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(198,13): error C2143: 구문 오류: ';'이(가) '*' 앞에 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(198,13): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(198,19): error C2238: ';' 앞에 예기치 않은 토큰이 있습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(392,2): warning C4091: 'typedef ': 변수를 선언하지 않으면 'ENetEvent' 왼쪽은 무시됩니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(395,1): error C2011: 'ENetBuffer': 'struct' 형식 재정의
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(20): message : 'ENetBuffer' 선언을 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\peer.cpp(123,36): error C2039: 'host': 'ENetPeer'의 멤버가 아닙니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(195): message : 'ENetPeer' 선언을 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\peer.cpp(128,15): error C2039: 'host': 'ENetPeer'의 멤버가 아닙니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(195): message : 'ENetPeer' 선언을 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\peer.cpp(134,95): warning C4267: '초기화 중': 'size_t'에서 'enet_uint32'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'peer.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(89,8): error C2011: 'ENetBuffer': 'struct' 형식 재정의
+  (소스 파일 'peer.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(20,8):
+      'ENetBuffer' 선언을 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(95,54): warning C4099: 'ENetPacket': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  (소스 파일 'peer.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(52,7):
+      'ENetPacket' 선언을 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(204,8): warning C4099: 'ENetPeer': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  (소스 파일 'peer.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(204,8):
+      'ENetPeer' 선언을 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(379,26): error C2079: 'ENetHost::buffers'은(는) 정의되지 않은 struct 'ENetBuffer'을(를) 사용합니다.
+  (소스 파일 'peer.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(472,8): warning C4099: 'ENetEvent': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  (소스 파일 'peer.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(472,8):
+      'ENetEvent' 선언을 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\peer.cpp(134,35): warning C4267: '초기화 중': 'size_t'에서 'enet_uint32'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\peer.cpp(163,31): warning C4267: '+=': 'size_t'에서 'enet_uint32'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\peer.cpp(182,54): warning C4267: '=': 'size_t'에서 'enet_uint16'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\peer.cpp(182,40): warning C4267: '=': 'size_t'에서 'enet_uint16'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\peer.cpp(187,57): warning C4267: '인수': 'size_t'에서 'u_short'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\peer.cpp(190,58): warning C4267: '인수': 'size_t'에서 'u_long'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\peer.cpp(213,46): warning C4267: '인수': 'size_t'에서 'u_short'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\peer.cpp(219,47): warning C4267: '인수': 'size_t'에서 'u_short'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\peer.cpp(224,49): warning C4267: '인수': 'size_t'에서 'u_short'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\peer.cpp(227,8): warning C4267: '인수': 'size_t'에서 'enet_uint16'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\peer.cpp(368,21): error C2039: 'host': 'ENetPeer'의 멤버가 아닙니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(195): message : 'ENetPeer' 선언을 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\peer.cpp(370,17): error C2039: 'host': 'ENetPeer'의 멤버가 아닙니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(195): message : 'ENetPeer' 선언을 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\peer.cpp(379,21): error C2039: 'host': 'ENetPeer'의 멤버가 아닙니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(195): message : 'ENetPeer' 선언을 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\peer.cpp(381,17): error C2039: 'host': 'ENetPeer'의 멤버가 아닙니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(195): message : 'ENetPeer' 선언을 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\peer.cpp(433,23): error C2039: 'host': 'ENetPeer'의 멤버가 아닙니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(195): message : 'ENetPeer' 선언을 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\peer.cpp(533,31): error C2039: 'host': 'ENetPeer'의 멤버가 아닙니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(195): message : 'ENetPeer' 선언을 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\peer.cpp(576,31): error C2039: 'host': 'ENetPeer'의 멤버가 아닙니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(195): message : 'ENetPeer' 선언을 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\peer.cpp(651,100): warning C4267: '+=': 'size_t'에서 'enet_uint32'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\peer.cpp(696,42): error C2039: 'host': 'ENetPeer'의 멤버가 아닙니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(195): message : 'ENetPeer' 선언을 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\peer.cpp(771,27): error C2039: 'host': 'ENetPeer'의 멤버가 아닙니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(195): message : 'ENetPeer' 선언을 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\peer.cpp(771,60): error C2039: 'host': 'ENetPeer'의 멤버가 아닙니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(195): message : 'ENetPeer' 선언을 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\peer.cpp(801,27): error C2039: 'host': 'ENetPeer'의 멤버가 아닙니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(195): message : 'ENetPeer' 선언을 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\peer.cpp(801,60): error C2039: 'host': 'ENetPeer'의 멤버가 아닙니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(195): message : 'ENetPeer' 선언을 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\peer.cpp(817,19): error C2039: 'host': 'ENetPeer'의 멤버가 아닙니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(195): message : 'ENetPeer' 선언을 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\peer.cpp(817,52): error C2039: 'host': 'ENetPeer'의 멤버가 아닙니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(195): message : 'ENetPeer' 선언을 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\peer.cpp(858,15): error C2039: 'host': 'ENetPeer'의 멤버가 아닙니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(195): message : 'ENetPeer' 선언을 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\peer.cpp(858,48): error C2039: 'host': 'ENetPeer'의 멤버가 아닙니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(195): message : 'ENetPeer' 선언을 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\peer.cpp(996,41): error C2039: 'host': 'ENetPeer'의 멤버가 아닙니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(195): message : 'ENetPeer' 선언을 참조하십시오.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\peer.cpp(227,75): warning C4267: '인수': 'size_t'에서 'enet_uint16'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\peer.cpp(288,35): warning C4267: '초기화 중': 'size_t'에서 'enet_uint32'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\peer.cpp(317,31): warning C4267: '+=': 'size_t'에서 'enet_uint32'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\peer.cpp(336,40): warning C4267: '=': 'size_t'에서 'enet_uint16'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\peer.cpp(341,57): warning C4267: '인수': 'size_t'에서 'u_short'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\peer.cpp(344,58): warning C4267: '인수': 'size_t'에서 'u_long'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\peer.cpp(367,46): warning C4267: '인수': 'size_t'에서 'u_short'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\peer.cpp(373,47): warning C4267: '인수': 'size_t'에서 'u_short'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\peer.cpp(378,49): warning C4267: '인수': 'size_t'에서 'u_short'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\peer.cpp(381,57): warning C4267: '인수': 'size_t'에서 'enet_uint16'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\peer.cpp(408,94): warning C4267: '+=': 'size_t'에서 'enet_uint32'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\peer.cpp(788,16): error C2084: 'void ENetPeer::SetupOutgoingCommand(ENetOutgoingCommand *)' 함수에 이미 본문이 있습니다.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\peer.cpp(405,16):
+      'ENetPeer::SetupOutgoingCommand'의 이전 정의를 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\peer.cpp(791,94): warning C4267: '+=': 'size_t'에서 'enet_uint32'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\peer.cpp(1337,100): warning C4267: '+=': 'size_t'에서 'enet_uint32'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\peer.cpp(1604,5): error C3861: 'enet_peer_remove_incoming_commands': 식별자를 찾을 수 없습니다.
   protocol.cpp
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Defines.h(5,1): warning C4005: 'ENET_API': 매크로 재정의
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(35): message : 'ENET_API'의 이전 정의를 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(66,28): error C2039: 'shared_ptr': 'std'의 멤버가 아닙니다.
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\list(24): message : 'std' 선언을 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(66,38): error C2061: 구문 오류: 식별자 'shared_ptr'
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(27,29): error C3861: 'Forward': 식별자를 찾을 수 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(42): message : 컴파일되는 클래스 템플릿 인스턴스화 'EnetFunction<Ret,Args...>'에 대한 참조를 확인하세요.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(27,29): error C2065: 'Forward': 선언되지 않은 식별자입니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Defines.h(5,9): warning C4005: 'ENET_API': 매크로 재정의
+  (소스 파일 'protocol.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(35,9):
+      'ENET_API'의 이전 정의를 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(59,30): error C3646: 'freeCallback': 알 수 없는 재정의 지정자입니다.
+  (소스 파일 'protocol.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(59,5): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'protocol.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(41,28): error C2061: 구문 오류: 식별자 'Ret'
+  (소스 파일 'protocol.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(41,28):
+      템플릿 인스턴스화 컨텍스트(가장 오래된 인스턴스화 컨텍스트)가
+          C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(12,11):
+          클래스 템플릿 요소 특수화 'ENetFunction::TFunction<void(Args...)>'을(를) 컴파일하는 동안
+          C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(38,15):
+          클래스 템플릿 'ENetFunction::TFunction<void(Args...)>::TMemberCallableImpl'을(를) 컴파일하는 동안
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(43,52): error C2061: 구문 오류: 식별자 'Method'
+  (소스 파일 'protocol.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(47,17): error C3646: 'Invoke': 알 수 없는 재정의 지정자입니다.
+  (소스 파일 'protocol.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(47,23): error C2059: 구문 오류: '('
+  (소스 파일 'protocol.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(48,13): error C2334: '{' 앞에 예기치 않은 토큰이 있습니다. 명백한 함수 본문을 건너뜁니다.
+  (소스 파일 'protocol.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(55,20): error C3646: 'Func': 알 수 없는 재정의 지정자입니다.
+  (소스 파일 'protocol.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(55,13): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'protocol.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(44,41): error C3861: 'Func': 식별자를 찾을 수 없습니다.
+  (소스 파일 'protocol.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(44,46): error C3861: 'InFunc': 식별자를 찾을 수 없습니다.
+  (소스 파일 'protocol.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(44,46): error C2065: 'InFunc': 선언되지 않은 식별자입니다.
+  (소스 파일 'protocol.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(36,21): error C2143: 구문 오류: ';'이(가) '&' 앞에 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(66): message : 컴파일되는 클래스 템플릿 인스턴스화 'ENetIterator<T>'에 대한 참조를 확인하세요.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(36,1): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(36,1): error C2334: '{' 앞에 예기치 않은 토큰이 있습니다. 명백한 함수 본문을 건너뜁니다.
+  (소스 파일 'protocol.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(36,21):
+      템플릿 인스턴스화 컨텍스트(가장 오래된 인스턴스화 컨텍스트)가
+          C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(18,8):
+          클래스 템플릿 'ENetIterator'을(를) 컴파일하는 동안
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(36,5): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'protocol.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(36,36): error C2334: '{' 앞에 예기치 않은 토큰이 있습니다. 명백한 함수 본문을 건너뜁니다.
+  (소스 파일 'protocol.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(41,22): error C2143: 구문 오류: ';'이(가) '++' 앞에 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(41,1): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'protocol.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(41,5): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'protocol.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(41,22): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'protocol.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(47,21): error C2143: 구문 오류: ';'이(가) '&' 앞에 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(47,1): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(47,1): error C2334: '{' 앞에 예기치 않은 토큰이 있습니다. 명백한 함수 본문을 건너뜁니다.
+  (소스 파일 'protocol.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(47,5): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'protocol.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(47,36): error C2334: '{' 앞에 예기치 않은 토큰이 있습니다. 명백한 함수 본문을 건너뜁니다.
+  (소스 파일 'protocol.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(52,22): error C2143: 구문 오류: ';'이(가) '--' 앞에 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(52,1): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'protocol.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(52,5): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'protocol.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(52,22): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'protocol.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,9): error C2065: 'ENetListIterator': 선언되지 않은 식별자입니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,26): error C3878: 구문 오류: 예기치 않은 토큰 '식별자'이(가) 'expression' 다음에 있습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,26): message : 오류 복구를 건너뛰었습니다. '식별자 ( *  . . . this'
+  (소스 파일 'protocol.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,26): error C3878: 구문 오류: 예기치 않은 토큰 'tmp'이(가) 'expression' 다음에 있습니다.
+  (소스 파일 'protocol.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,35): error C2760: 구문 오류: 여기서 ')'은(는) 예상치 못한 오류였습니다. 예상된 오류는 ';'였습니다
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,35): error C3878: 구문 오류: 예기치 않은 토큰 ')'이(가) 'expression_statement' 다음에 있습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,35): message : 오류 복구를 건너뛰었습니다. ')'
+  (소스 파일 'protocol.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,35): error C3878: 구문 오류: 예기치 않은 토큰 ')'이(가) 'expression-statement' 다음에 있습니다.
+  (소스 파일 'protocol.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(44,16): error C2065: 'tmp': 선언되지 않은 식별자입니다.
+  (소스 파일 'protocol.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,9): error C2065: 'ENetListIterator': 선언되지 않은 식별자입니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,26): error C3878: 구문 오류: 예기치 않은 토큰 '식별자'이(가) 'expression' 다음에 있습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,26): message : 오류 복구를 건너뛰었습니다. '식별자 ( *  . . . this'
+  (소스 파일 'protocol.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,26): error C3878: 구문 오류: 예기치 않은 토큰 'tmp'이(가) 'expression' 다음에 있습니다.
+  (소스 파일 'protocol.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,35): error C2760: 구문 오류: 여기서 ')'은(는) 예상치 못한 오류였습니다. 예상된 오류는 ';'였습니다
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,35): error C3878: 구문 오류: 예기치 않은 토큰 ')'이(가) 'expression_statement' 다음에 있습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,35): message : 오류 복구를 건너뛰었습니다. ')'
+  (소스 파일 'protocol.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,35): error C3878: 구문 오류: 예기치 않은 토큰 ')'이(가) 'expression-statement' 다음에 있습니다.
+  (소스 파일 'protocol.cpp'을(를) 컴파일하는 중)
+  
 C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(55,16): error C2065: 'tmp': 선언되지 않은 식별자입니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(198,13): error C2143: 구문 오류: ';'이(가) '*' 앞에 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(198,13): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(198,19): error C2238: ';' 앞에 예기치 않은 토큰이 있습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(392,2): warning C4091: 'typedef ': 변수를 선언하지 않으면 'ENetEvent' 왼쪽은 무시됩니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(395,1): error C2011: 'ENetBuffer': 'struct' 형식 재정의
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(20): message : 'ENetBuffer' 선언을 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(427,48): warning C4267: '인수': 'size_t'에서 'u_long'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(633,79): warning C4267: '=': 'size_t'에서 'enet_uint32'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(706,84): error C2440: '형식 캐스트': 'ENetListIterator'에서 'ENetIncomingCommand *'(으)로 변환할 수 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(706,48): message : 이 변환을 수행할 수 있는 사용 가능한 사용자 정의 변환 연산자가 없거나 연산자를 호출할 수 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(752,79): warning C4267: '=': 'size_t'에서 'enet_uint32'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1035,40): error C2440: '=': '_Ty *'에서 'ENetPeer *'(으)로 변환할 수 없습니다.
+  (소스 파일 'protocol.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(89,8): error C2011: 'ENetBuffer': 'struct' 형식 재정의
+  (소스 파일 'protocol.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(20,8):
+      'ENetBuffer' 선언을 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(95,54): warning C4099: 'ENetPacket': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  (소스 파일 'protocol.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(52,7):
+      'ENetPacket' 선언을 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(204,8): warning C4099: 'ENetPeer': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  (소스 파일 'protocol.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(204,8):
+      'ENetPeer' 선언을 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(379,26): error C2079: 'ENetHost::buffers'은(는) 정의되지 않은 struct 'ENetBuffer'을(를) 사용합니다.
+  (소스 파일 'protocol.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(472,8): warning C4099: 'ENetEvent': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  (소스 파일 'protocol.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(472,8):
+      'ENetEvent' 선언을 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(412,48): warning C4267: '인수': 'size_t'에서 'u_long'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(617,63): warning C4267: '=': 'size_t'에서 'enet_uint32'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(738,63): warning C4267: '=': 'size_t'에서 'enet_uint32'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1056,20): error C2079: 'buffer'은(는) 정의되지 않은 struct 'ENetBuffer'을(를) 사용합니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1066,17): error C2664: 'Ret ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)>::operator ()(const ENetBuffer *,size_t)': 인수 1을(를) '<error type> *'에서 'const ENetBuffer *'(으)로 변환할 수 없습니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1066,17): error C2664:         with
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1066,17): error C2664:         [
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1066,17): error C2664:             Ret=enet_uint32
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1066,17): error C2664:         ]
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1066,28):
+      가리킨 형식이 관련이 없습니다. 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트가 필요합니다.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(204,13):
+      'ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)>::operator ()' 선언을 참조하십시오.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1066,17):
+      인수 목록 '(<error type> *, int)'을(를) 일치시키는 동안
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1074,40): warning C4267: '+=': 'size_t'에서 'enet_uint32'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1219,20): error C2079: 'buffer'은(는) 정의되지 않은 struct 'ENetBuffer'을(를) 사용합니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1224,26): error C2664: 'int enet_socket_receive(ENetSocket,ENetAddress *,ENetBuffer *,size_t)': 인수 3을(를) '<error type> *'에서 'ENetBuffer *'(으)로 변환할 수 없습니다.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1226,13):
+      가리킨 형식이 관련이 없습니다. 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트가 필요합니다.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(529,29):
+      'enet_socket_receive' 선언을 참조하십시오.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1224,26):
+      인수 목록 '(ENetSocket, ENetAddress *, <error type> *, int)'을(를) 일치시키는 동안
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1281,58): error C2109: 첨자는 배열 또는 포인터 형식을 사용해야 합니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1291,80): error C2109: 첨자는 배열 또는 포인터 형식을 사용해야 합니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1303,9): error C2027: 정의되지 않은 형식 'ENetBuffer'을(를) 사용했습니다.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(20,8):
+      'ENetBuffer' 선언을 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1304,9): error C2027: 정의되지 않은 형식 'ENetBuffer'을(를) 사용했습니다.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(20,8):
+      'ENetBuffer' 선언을 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1306,29): error C2027: 정의되지 않은 형식 'ENetBuffer'을(를) 사용했습니다.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(20,8):
+      'ENetBuffer' 선언을 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1327,32): error C2440: '=': 'ENetBuffer *'에서 'size_t'(으)로 변환할 수 없습니다.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1327,32):
+      이 변환이 가능한 컨텍스트가 없습니다.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1390,58): error C2109: 첨자는 배열 또는 포인터 형식을 사용해야 합니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1462,84): error C2109: 첨자는 배열 또는 포인터 형식을 사용해야 합니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1539,9): error C2027: 정의되지 않은 형식 'ENetBuffer'을(를) 사용했습니다.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(20,8):
+      'ENetBuffer' 선언을 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1540,9): error C2027: 정의되지 않은 형식 'ENetBuffer'을(를) 사용했습니다.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(20,8):
+      'ENetBuffer' 선언을 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1542,29): error C2027: 정의되지 않은 형식 'ENetBuffer'을(를) 사용했습니다.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(20,8):
+      'ENetBuffer' 선언을 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1550,13): error C2027: 정의되지 않은 형식 'ENetBuffer'을(를) 사용했습니다.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(20,8):
+      'ENetBuffer' 선언을 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1551,13): error C2027: 정의되지 않은 형식 'ENetBuffer'을(를) 사용했습니다.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(20,8):
+      'ENetBuffer' 선언을 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1566,32): error C2440: '=': 'ENetBuffer *'에서 'size_t'(으)로 변환할 수 없습니다.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1566,32):
+      이 변환이 가능한 컨텍스트가 없습니다.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1668,41): error C2109: 첨자는 배열 또는 포인터 형식을 사용해야 합니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1667,54): error C2064: 항은 5개의 인수를 받아들이는 함수로 계산되지 않습니다.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1667,54):
+      클래스에서 'operator()' 또는 사용자 정의 변환 연산자를 적절한 수의 인수를 취하는 함수 포인터 또는 함수 참조로 정의하지 않습니다.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1667,54):
+      인수 목록 '(void *, size_t, size_t, enet_uint8 [4096], size_t)'을(를) 일치시키는 동안
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1687,92): error C7732: ']' 앞에 식이 필요합니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1692,35): error C2664: 'Ret ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)>::operator ()(const ENetBuffer *,size_t)': 인수 1을(를) '<error type>'에서 'const ENetBuffer *'(으)로 변환할 수 없습니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1692,35): error C2664:         with
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1692,35): error C2664:         [
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1692,35): error C2664:             Ret=enet_uint32
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1692,35): error C2664:         ]
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1692,50):
+      정수 계열 형식에서 포인터 형식으로 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트가 필요합니다.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(204,13):
+      'ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)>::operator ()' 선언을 참조하십시오.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1692,35):
+      인수 목록 '(<error type>, size_t)'을(를) 일치시키는 동안
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1698,32): error C2109: 첨자는 배열 또는 포인터 형식을 사용해야 합니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1699,32): error C2109: 첨자는 배열 또는 포인터 형식을 사용해야 합니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1705,26): error C2664: 'int enet_socket_send(ENetSocket,const ENetAddress *,const ENetBuffer *,size_t)': 인수 3을(를) '<error type>'에서 'const ENetBuffer *'(으)로 변환할 수 없습니다.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1705,84):
+      정수 계열 형식에서 포인터 형식으로 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트가 필요합니다.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(528,29):
+      'enet_socket_send' 선언을 참조하십시오.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1705,26):
+      인수 목록 '(ENetSocket, ENetAddress *, <error type>, size_t)'을(를) 일치시키는 동안
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1820,58): error C2065: 'host': 선언되지 않은 식별자입니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1844,42): error C2065: 'host': 선언되지 않은 식별자입니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1846,54): error C2065: 'host': 선언되지 않은 식별자입니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1862,57): error C2065: 'host': 선언되지 않은 식별자입니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1878,54): error C2065: 'host': 선언되지 않은 식별자입니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1896,62): error C2065: 'host': 선언되지 않은 식별자입니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1913,13): error C2065: 'host': 선언되지 않은 식별자입니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1918,13): error C2065: 'host': 선언되지 않은 식별자입니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1920,17): error C2065: 'host': 선언되지 않은 식별자입니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1925,34): error C2065: 'host': 선언되지 않은 식별자입니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1925,64): error C2065: 'host': 선언되지 않은 식별자입니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1925,17): error C2660: 'enet_socket_wait': 함수는 2개의 인수를 사용하지 않습니다.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(530,29):
+      'enet_socket_wait' 선언을 참조하십시오.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1925,17):
+      인수 목록 '()'을(를) 일치시키는 동안
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1929,9): error C2065: 'host': 선언되지 않은 식별자입니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1830,20): warning C4305: 'return': 'int'에서 'bool'(으)로 잘립니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1856,20): warning C4305: 'return': 'int'에서 'bool'(으)로 잘립니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1872,20): warning C4305: 'return': 'int'에서 'bool'(으)로 잘립니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1888,20): warning C4305: 'return': 'int'에서 'bool'(으)로 잘립니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1906,24): warning C4305: 'return': 'int'에서 'bool'(으)로 잘립니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1926,24): warning C4305: 'return': 'int'에서 'bool'(으)로 잘립니다.
+  service.cpp
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Defines.h(5,9): warning C4005: 'ENET_API': 매크로 재정의
+  (소스 파일 'service.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(35,9):
+      'ENET_API'의 이전 정의를 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(59,30): error C3646: 'freeCallback': 알 수 없는 재정의 지정자입니다.
+  (소스 파일 'service.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(59,5): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'service.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(41,28): error C2061: 구문 오류: 식별자 'Ret'
+  (소스 파일 'service.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(41,28):
+      템플릿 인스턴스화 컨텍스트(가장 오래된 인스턴스화 컨텍스트)가
+          C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(12,11):
+          클래스 템플릿 요소 특수화 'ENetFunction::TFunction<void(Args...)>'을(를) 컴파일하는 동안
+          C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(38,15):
+          클래스 템플릿 'ENetFunction::TFunction<void(Args...)>::TMemberCallableImpl'을(를) 컴파일하는 동안
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(43,52): error C2061: 구문 오류: 식별자 'Method'
+  (소스 파일 'service.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(47,17): error C3646: 'Invoke': 알 수 없는 재정의 지정자입니다.
+  (소스 파일 'service.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(47,23): error C2059: 구문 오류: '('
+  (소스 파일 'service.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(48,13): error C2334: '{' 앞에 예기치 않은 토큰이 있습니다. 명백한 함수 본문을 건너뜁니다.
+  (소스 파일 'service.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(55,20): error C3646: 'Func': 알 수 없는 재정의 지정자입니다.
+  (소스 파일 'service.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(55,13): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'service.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(44,41): error C3861: 'Func': 식별자를 찾을 수 없습니다.
+  (소스 파일 'service.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(44,46): error C3861: 'InFunc': 식별자를 찾을 수 없습니다.
+  (소스 파일 'service.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(44,46): error C2065: 'InFunc': 선언되지 않은 식별자입니다.
+  (소스 파일 'service.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(36,21): error C2143: 구문 오류: ';'이(가) '&' 앞에 없습니다.
+  (소스 파일 'service.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(36,21):
+      템플릿 인스턴스화 컨텍스트(가장 오래된 인스턴스화 컨텍스트)가
+          C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(18,8):
+          클래스 템플릿 'ENetIterator'을(를) 컴파일하는 동안
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(36,5): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'service.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(36,36): error C2334: '{' 앞에 예기치 않은 토큰이 있습니다. 명백한 함수 본문을 건너뜁니다.
+  (소스 파일 'service.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(41,22): error C2143: 구문 오류: ';'이(가) '++' 앞에 없습니다.
+  (소스 파일 'service.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(41,5): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'service.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(41,22): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'service.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(47,21): error C2143: 구문 오류: ';'이(가) '&' 앞에 없습니다.
+  (소스 파일 'service.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(47,5): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'service.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(47,36): error C2334: '{' 앞에 예기치 않은 토큰이 있습니다. 명백한 함수 본문을 건너뜁니다.
+  (소스 파일 'service.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(52,22): error C2143: 구문 오류: ';'이(가) '--' 앞에 없습니다.
+  (소스 파일 'service.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(52,5): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'service.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(52,22): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+  (소스 파일 'service.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,9): error C2065: 'ENetListIterator': 선언되지 않은 식별자입니다.
+  (소스 파일 'service.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,26): error C3878: 구문 오류: 예기치 않은 토큰 'tmp'이(가) 'expression' 다음에 있습니다.
+  (소스 파일 'service.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,35): error C2760: 구문 오류: 여기서 ')'은(는) 예상치 못한 오류였습니다. 예상된 오류는 ';'였습니다
+  (소스 파일 'service.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(42,35): error C3878: 구문 오류: 예기치 않은 토큰 ')'이(가) 'expression-statement' 다음에 있습니다.
+  (소스 파일 'service.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(44,16): error C2065: 'tmp': 선언되지 않은 식별자입니다.
+  (소스 파일 'service.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,9): error C2065: 'ENetListIterator': 선언되지 않은 식별자입니다.
+  (소스 파일 'service.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,26): error C3878: 구문 오류: 예기치 않은 토큰 'tmp'이(가) 'expression' 다음에 있습니다.
+  (소스 파일 'service.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,35): error C2760: 구문 오류: 여기서 ')'은(는) 예상치 못한 오류였습니다. 예상된 오류는 ';'였습니다
+  (소스 파일 'service.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(53,35): error C3878: 구문 오류: 예기치 않은 토큰 ')'이(가) 'expression-statement' 다음에 있습니다.
+  (소스 파일 'service.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\list.h(55,16): error C2065: 'tmp': 선언되지 않은 식별자입니다.
+  (소스 파일 'service.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(89,8): error C2011: 'ENetBuffer': 'struct' 형식 재정의
+  (소스 파일 'service.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(20,8):
+      'ENetBuffer' 선언을 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(95,54): warning C4099: 'ENetPacket': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  (소스 파일 'service.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Packet.h(52,7):
+      'ENetPacket' 선언을 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(204,8): warning C4099: 'ENetPeer': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  (소스 파일 'service.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(204,8):
+      'ENetPeer' 선언을 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(379,26): error C2079: 'ENetHost::buffers'은(는) 정의되지 않은 struct 'ENetBuffer'을(를) 사용합니다.
+  (소스 파일 'service.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(472,8): warning C4099: 'ENetEvent': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  (소스 파일 'service.cpp'을(를) 컴파일하는 중)
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(472,8):
+      'ENetEvent' 선언을 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\service.cpp(3,24): error C2511: 'ENetHost *ENetService::enet_host_create(void)': 오버로드된 멤버 함수가 'ENetService'에 없습니다.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(638,7):
+      'ENetService' 선언을 참조하십시오.
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\service.cpp(24,59): error C2065: 'address': 선언되지 않은 식별자입니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\service.cpp(24,112): error C2065: 'address': 선언되지 않은 식별자입니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\service.cpp(42,9): error C2065: 'address': 선언되지 않은 식별자입니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\service.cpp(43,26): error C2065: 'address': 선언되지 않은 식별자입니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\service.cpp(45,10): error C2065: 'channelLimit': 선언되지 않은 식별자입니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\service.cpp(45,26): error C2065: 'channelLimit': 선언되지 않은 식별자입니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\service.cpp(46,9): error C2065: 'channelLimit': 선언되지 않은 식별자입니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\service.cpp(48,63): error C2059: 구문 오류: ')'
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\service.cpp(53,22): error C2947: template-argument-list을(를) 끝내려면 '>' 기호가 있어야 하는데 '+='이(가) 있습니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\service.cpp(53,25): error C2206: 'enet_host_random_seed': 형식 정의는 함수 정의에 사용할 수 없습니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\service.cpp(53,48): error C2059: 구문 오류: '<post-function-declarator>'
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\service.cpp(55,26): error C2065: 'channelLimit': 선언되지 않은 식별자입니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\service.cpp(56,31): error C2065: 'incomingBandwidth': 선언되지 않은 식별자입니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\service.cpp(57,31): error C2065: 'outgoingBandwidth': 선언되지 않은 식별자입니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\service.cpp(61,23): error C2065: 'peerCount': 선언되지 않은 식별자입니다.
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\service.cpp(64,9): error C2679: 이항 '=': 오른쪽 피연산자로 'nullptr' 형식을 사용하는 연산자가 없거나 허용되는 변환이 없습니다.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(222,20):
+      'ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)> &ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)>::operator =(const ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)> &)'일 수 있습니다.
+          C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\service.cpp(64,9):
+          'ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)> &ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)>::operator =(const ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)> &)': 인수 2을(를) 'nullptr'에서 'const ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)> &'(으)로 변환할 수 없습니다.
+              C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\service.cpp(64,22):
+              원인: 'nullptr'에서 'const ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)>'(으)로 변환할 수 없습니다.
+              C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\service.cpp(64,22):
+              'ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)>::TFunction': 모든 인수 형식을 변환할 수 있는 오버로드된 함수가 없습니다.
+                  C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(221,9):
+                  'ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)>::TFunction(const ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)> &)'일 수 있습니다.
+                      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\service.cpp(64,22):
+                      'ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)>::TFunction(const ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)> &)': 인수 1을(를) 'nullptr'에서 'const ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)> &'(으)로 변환할 수 없습니다.
+                          C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\service.cpp(64,22):
+                          원인: 'nullptr'에서 'const ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)>'(으)로 변환할 수 없습니다.
+                          C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\service.cpp(64,22):
+                          변환하려면 둘째 사용자 정의 변환 연산자 또는 생성자가 있어야 합니다.
+                  C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(188,9):
+                  또는       'ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)>::TFunction(void)'
+                      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\service.cpp(64,22):
+                      'ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)>::TFunction': 함수는 1개의 인수를 사용하지 않습니다.
+                  C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(199,9):
+                  또는       'ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)>::TFunction(Class *,Ret (__cdecl Class::* )(const ENetBuffer *,size_t))'
           with
           [
-              _Ty=ENetPeer *
+              Ret=enet_uint32
           ]
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1035,20): message : 가리킨 형식이 관련이 없습니다. 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트가 필요합니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1070,20): error C2079: 'buffer'은(는) 정의되지 않은 struct 'ENetBuffer'을(를) 사용합니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1080,12): error C2664: 'enet_uint32 (const ENetBuffer *,size_t)': 인수 1을(를) 'int *'에서 'const ENetBuffer *'(으)로 변환할 수 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1080,28): message : 가리킨 형식이 관련이 없습니다. 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트가 필요합니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1088,40): warning C4267: '+=': 'size_t'에서 'enet_uint32'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1231,20): error C2079: 'buffer'은(는) 정의되지 않은 struct 'ENetBuffer'을(를) 사용합니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1236,26): error C2664: 'int enet_socket_receive(ENetSocket,ENetAddress *,ENetBuffer *,size_t)': 인수 3을(를) 'int *'에서 'ENetBuffer *'(으)로 변환할 수 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1238,13): message : 가리킨 형식이 관련이 없습니다. 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트가 필요합니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\enet.h(448,29): message : 'enet_socket_receive' 선언을 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1258,20): error C2664: 'int (_ENetHost *,_ENetEvent *)': 인수 2을(를) 'ENetEvent *'에서 '_ENetEvent *'(으)로 변환할 수 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1258,43): message : 가리킨 형식이 관련이 없습니다. 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트가 필요합니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1258,20): error C2664: 'int (_ENetHost *,_ENetEvent *)': 인수 1을(를) 'ENetHost *'에서 '_ENetHost *'(으)로 변환할 수 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1258,37): message : 가리킨 형식이 관련이 없습니다. 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트가 필요합니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1311,71): error C2440: '형식 캐스트': 'ENetListIterator'에서 'ENetAcknowledgement *'(으)로 변환할 수 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1311,27): message : 이 변환을 수행할 수 있는 사용 가능한 사용자 정의 변환 연산자가 없거나 연산자를 호출할 수 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1315,15): error C2027: 정의되지 않은 형식 'ENetBuffer'을(를) 사용했습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(20): message : 'ENetBuffer' 선언을 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1316,15): error C2027: 정의되지 않은 형식 'ENetBuffer'을(를) 사용했습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(20): message : 'ENetBuffer' 선언을 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1318,35): error C2027: 정의되지 않은 형식 'ENetBuffer'을(를) 사용했습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(20): message : 'ENetBuffer' 선언을 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1390,67): error C2440: '형식 캐스트': 'ENetListIterator'에서 'ENetOutgoingCommand *'(으)로 변환할 수 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1390,31): message : 이 변환을 수행할 수 있는 사용 가능한 사용자 정의 변환 연산자가 없거나 연산자를 호출할 수 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1417,67): error C2440: '형식 캐스트': 'ENetListIterator'에서 'ENetOutgoingCommand *'(으)로 변환할 수 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1417,31): message : 이 변환을 수행할 수 있는 사용 가능한 사용자 정의 변환 연산자가 없거나 연산자를 호출할 수 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1420,1): error C2440: '형식 캐스트': 'ENetListIterator'에서 'ENetOutgoingCommand *'(으)로 변환할 수 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1420,17): message : 이 변환을 수행할 수 있는 사용 가능한 사용자 정의 변환 연산자가 없거나 연산자를 호출할 수 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1429,83): error C2440: '형식 캐스트': 'ENetListIterator'에서 'ENetOutgoingCommand *'(으)로 변환할 수 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1429,35): message : 이 변환을 수행할 수 있는 사용 가능한 사용자 정의 변환 연산자가 없거나 연산자를 호출할 수 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1533,79): error C2440: '형식 캐스트': 'ENetListIterator'에서 'ENetOutgoingCommand *'(으)로 변환할 수 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1533,43): message : 이 변환을 수행할 수 있는 사용 가능한 사용자 정의 변환 연산자가 없거나 연산자를 호출할 수 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1551,15): error C2027: 정의되지 않은 형식 'ENetBuffer'을(를) 사용했습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(20): message : 'ENetBuffer' 선언을 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1552,15): error C2027: 정의되지 않은 형식 'ENetBuffer'을(를) 사용했습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(20): message : 'ENetBuffer' 선언을 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1554,35): error C2027: 정의되지 않은 형식 'ENetBuffer'을(를) 사용했습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(20): message : 'ENetBuffer' 선언을 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1562,19): error C2027: 정의되지 않은 형식 'ENetBuffer'을(를) 사용했습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(20): message : 'ENetBuffer' 선언을 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1563,19): error C2027: 정의되지 않은 형식 'ENetBuffer'을(를) 사용했습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(20): message : 'ENetBuffer' 선언을 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1596,5): error C3861: 'enet_list_clear': 식별자를 찾을 수 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1599,9): error C2440: '초기화 중': 'std::array<ENetPeer *,4095>'에서 'ENetPeer *'(으)로 변환할 수 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1599,36): message : 이 변환을 수행할 수 있는 사용 가능한 사용자 정의 변환 연산자가 없거나 연산자를 호출할 수 없습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1600,56): error C2446: '<': '_Ty *'에서 'ENetPeer *'(으)로 변환되지 않았습니다.
+                  C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(192,9):
+                  또는       'ENetFunction::TFunction<enet_uint32 (const ENetBuffer *,size_t)>::TFunction(Callable &&)'
+                  C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\service.cpp(64,22):
+                  인수 목록 '(nullptr)'을(를) 일치시키는 동안
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\service.cpp(64,9):
+      인수 목록 '(ENetChecksumCallback, nullptr)'을(를) 일치시키는 동안
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\service.cpp(83,21): error C2679: 이항 '=': 오른쪽 피연산자로 'nullptr' 형식을 사용하는 연산자가 없거나 허용되는 변환이 없습니다.
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(222,20):
+      'ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)> &ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::operator =(const ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)> &)'일 수 있습니다.
+          C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\service.cpp(83,21):
+          'ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)> &ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::operator =(const ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)> &)': 인수 2을(를) 'nullptr'에서 'const ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)> &'(으)로 변환할 수 없습니다.
+              C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\service.cpp(83,33):
+              원인: 'nullptr'에서 'const ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>'(으)로 변환할 수 없습니다.
+              C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\service.cpp(83,33):
+              'ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::TFunction': 모든 인수 형식을 변환할 수 있는 오버로드된 함수가 없습니다.
+                  C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(221,9):
+                  'ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::TFunction(const ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)> &)'일 수 있습니다.
+                      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\service.cpp(83,33):
+                      'ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::TFunction(const ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)> &)': 인수 1을(를) 'nullptr'에서 'const ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)> &'(으)로 변환할 수 없습니다.
+                          C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\service.cpp(83,33):
+                          원인: 'nullptr'에서 'const ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>'(으)로 변환할 수 없습니다.
+                          C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\service.cpp(83,33):
+                          변환하려면 둘째 사용자 정의 변환 연산자 또는 생성자가 있어야 합니다.
+                  C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(188,9):
+                  또는       'ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::TFunction(void)'
+                      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\service.cpp(83,33):
+                      'ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::TFunction': 함수는 1개의 인수를 사용하지 않습니다.
+                  C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(199,9):
+                  또는       'ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::TFunction(Class *,Ret (__cdecl Class::* )(void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t))'
           with
           [
-              _Ty=ENetPeer *
+              Ret=size_t
           ]
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1600,27): message : 가리킨 형식이 관련이 없습니다. 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트가 필요합니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1663,22): error C2027: 정의되지 않은 형식 'ENetBuffer'을(를) 사용했습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(20): message : 'ENetBuffer' 선언을 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1668,26): error C2027: 정의되지 않은 형식 'ENetBuffer'을(를) 사용했습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(20): message : 'ENetBuffer' 선언을 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1671,26): error C2027: 정의되지 않은 형식 'ENetBuffer'을(를) 사용했습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(20): message : 'ENetBuffer' 선언을 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1697,76): error C2027: 정의되지 않은 형식 'ENetBuffer'을(를) 사용했습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(20): message : 'ENetBuffer' 선언을 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1701,26): error C2027: 정의되지 않은 형식 'ENetBuffer'을(를) 사용했습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(20): message : 'ENetBuffer' 선언을 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1708,29): error C2027: 정의되지 않은 형식 'ENetBuffer'을(를) 사용했습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(20): message : 'ENetBuffer' 선언을 참조하십시오.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\protocol.cpp(1709,29): error C2027: 정의되지 않은 형식 'ENetBuffer'을(를) 사용했습니다.
-C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\Types.h(20): message : 'ENetBuffer' 선언을 참조하십시오.
+                  C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\callbacks.h(192,9):
+                  또는       'ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>::TFunction(Callable &&)'
+                  C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\service.cpp(83,33):
+                  인수 목록 '(nullptr)'을(를) 일치시키는 동안
+      C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\service.cpp(83,21):
+      인수 목록 '(ENetFunction::TFunction<size_t (void *,const ENetBuffer *,size_t,size_t,enet_uint8,size_t)>, nullptr)'을(를) 일치시키는 동안
+  
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\service.cpp(7,5): warning C4390: ';': 제어된 빈 문이 있습니다. 이 문이 필요합니까?
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\service.cpp(11,5): warning C4390: ';': 제어된 빈 문이 있습니다. 이 문이 필요합니까?
+C:\Users\User\Desktop\practice\EnetPorting\EnetPorting\service.cpp(19,9): warning C4390: ';': 제어된 빈 문이 있습니다. 이 문이 필요합니까?
   코드를 생성하고 있습니다...

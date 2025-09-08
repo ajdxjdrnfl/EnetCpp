@@ -8,22 +8,6 @@
 #define ENET_BUILDING_LIB 1
 #include "utils.h"
 #include "enet.h"
-static const size_t commandSizes[ENET_PROTOCOL_COMMAND_COUNT] =
-{
-    0,
-    sizeof(ENetProtocolAcknowledge),
-    sizeof(ENetProtocolConnect),
-    sizeof(ENetProtocolVerifyConnect),
-    sizeof(ENetProtocolDisconnect),
-    sizeof(ENetProtocolPing),
-    sizeof(ENetProtocolSendReliable),
-    sizeof(ENetProtocolSendUnreliable),
-    sizeof(ENetProtocolSendFragment),
-    sizeof(ENetProtocolSendUnsequenced),
-    sizeof(ENetProtocolBandwidthLimit),
-    sizeof(ENetProtocolThrottleConfigure),
-    sizeof(ENetProtocolSendFragment)
-};
 
 size_t enet_protocol_command_size(const enet_uint8& commandNumber)
 {
@@ -111,11 +95,11 @@ static int enet_protocol_dispatch_incoming_commands(ENetHost* host, ENetEvent* e
     return 0;
 }
 
-static void enet_protocol_notify_connect(ENetHost* host, ENetPeer* peer, ENetEvent* event)
+void enet_protocol_notify_connect(ENetHost* host, ENetPeer* peer, ENetEvent* event)
 {
     host->recalculateBandwidthLimits = 1;
 
-    if (event != NULL)
+    if (event != nullptr)
     {
         enet_protocol_change_state(host, peer, ENET_PEER_STATE_CONNECTED);
 
@@ -127,7 +111,7 @@ static void enet_protocol_notify_connect(ENetHost* host, ENetPeer* peer, ENetEve
         enet_protocol_dispatch_state(host, peer, peer->state == ENET_PEER_STATE_CONNECTING ? ENET_PEER_STATE_CONNECTION_SUCCEEDED : ENET_PEER_STATE_CONNECTION_PENDING);
 }
 
-static void enet_protocol_notify_disconnect(ENetHost* host, ENetPeer* peer, ENetEvent* event)
+void enet_protocol_notify_disconnect(ENetHost* host, ENetPeer* peer, ENetEvent* event)
 {
     if (peer->state >= ENET_PEER_STATE_CONNECTION_PENDING)
         host->recalculateBandwidthLimits = 1;
@@ -151,7 +135,7 @@ static void enet_protocol_notify_disconnect(ENetHost* host, ENetPeer* peer, ENet
         }
 }
 
-static void enet_protocol_remove_sent_unreliable_commands(ENetPeer* peer, ENetList* sentUnreliableCommands)
+void enet_protocol_remove_sent_unreliable_commands(ENetPeer* peer, ENetList* sentUnreliableCommands)
 {
     ENetOutgoingCommand* outgoingCommand;
 
@@ -208,9 +192,10 @@ static ENetOutgoingCommand* enet_protocol_find_sent_reliable_command(ENetList* l
     return NULL;
 }
 
+// ack가 온 reliable 패킷(sentReliableCommands)까지는 전부 버려준다
 static ENetProtocolCommand enet_protocol_remove_sent_reliable_command(ENetPeer* peer, enet_uint16 reliableSequenceNumber, enet_uint8 channelID)
 {
-    ENetOutgoingCommand* outgoingCommand = NULL;
+    ENetOutgoingCommand* outgoingCommand = nullptr;
     ENetListIterator currentCommand;
     ENetProtocolCommand commandNumber;
     int wasSent = 1;
@@ -229,13 +214,13 @@ static ENetProtocolCommand enet_protocol_remove_sent_reliable_command(ENetPeer* 
     if (currentCommand == enet_list_end(&peer->sentReliableCommands))
     {
         outgoingCommand = enet_protocol_find_sent_reliable_command(&peer->outgoingCommands, reliableSequenceNumber, channelID);
-        if (outgoingCommand == NULL)
+        if (outgoingCommand == nullptr)
             outgoingCommand = enet_protocol_find_sent_reliable_command(&peer->outgoingSendReliableCommands, reliableSequenceNumber, channelID);
 
         wasSent = 0;
     }
 
-    if (outgoingCommand == NULL)
+    if (outgoingCommand == nullptr)
         return ENET_PROTOCOL_COMMAND_NONE;
 
     if (channelID < peer->channelCount)
@@ -254,7 +239,7 @@ static ENetProtocolCommand enet_protocol_remove_sent_reliable_command(ENetPeer* 
 
     enet_list_remove(&outgoingCommand->outgoingCommandList);
 
-    if (outgoingCommand->packet != NULL)
+    if (outgoingCommand->packet != nullptr)
     {
         if (wasSent)
             peer->reliableDataInTransit -= outgoingCommand->fragmentLength;
@@ -1027,7 +1012,7 @@ static int enet_protocol_handle_incoming_commands(ENetHost* host, ENetEvent* eve
         headerSize += sizeof(enet_uint32);
 
     if (peerID == ENET_PROTOCOL_MAXIMUM_PEER_ID)
-        peer = NULL;
+        peer = nullptr;
     else
         if (peerID >= host->peerCount)
             return 0;
@@ -1742,6 +1727,34 @@ static int enet_protocol_send_outgoing_commands(ENetHost* host, ENetEvent* event
     @remarks this function need only be used in circumstances where one wishes to send queued packets earlier than in a call to enet_host_service().
     @ingroup host
 */
+void ENetHost::flush()
+{
+    serviceTime = enet_time_get();
+    enet_protocol_send_outgoing_commands(this, nullptr, 0);
+}
+
+void ENetHost::dispatch_state(ENetPeer* peer, ENetPeerState state)
+{
+    change_state(peer, state);
+
+    if (!(peer->flags & ENET_PEER_FLAG_NEEDS_DISPATCH))
+    {
+        dispatchQueue.insert(dispatchQueue.end(), &peer->dispatchList);
+
+        peer->flags |= ENET_PEER_FLAG_NEEDS_DISPATCH;
+    }
+}
+
+void ENetHost::change_state(ENetPeer * peer, ENetPeerState state)
+{
+    if (state == ENET_PEER_STATE_CONNECTED || state == ENET_PEER_STATE_DISCONNECT_LATER)
+        peer->OnConnect();
+    else
+        peer->OnDisconnect();
+
+    peer->state = state;
+}
+
 void enet_host_flush(ENetHost* host)
 {
     host->serviceTime = enet_time_get();
@@ -1758,6 +1771,18 @@ void enet_host_flush(ENetHost* host)
     @retval < 0 on failure
     @ingroup host
 */
+
+int ENetHost::check_events(ENetEvent* event)
+{
+    if (event == nullptr) return -1;
+
+    event->type = ENET_EVENT_TYPE_NONE;
+    event->peer = nullptr;
+    event->packet = nullptr;
+
+    return enet_protocol_dispatch_incoming_commands(this, event);
+}
+
 int enet_host_check_events(ENetHost* host, ENetEvent* event)
 {
     if (event == nullptr) return -1;
@@ -1782,6 +1807,131 @@ int enet_host_check_events(ENetHost* host, ENetEvent* event)
     @remarks enet_host_service should be called fairly regularly for adequate performance
     @ingroup host
 */
+bool ENetHost::service(ENetEvent* event, enet_uint32 timeout)
+{
+    enet_uint32 waitCondition;
+
+    if (event != nullptr)
+    {
+        event->type = ENET_EVENT_TYPE_NONE;
+        event->peer = nullptr;
+        event->packet = nullptr;
+
+        switch (enet_protocol_dispatch_incoming_commands(host, event))
+        {
+        case 1:
+            return 1;
+
+        case -1:
+#ifdef ENET_DEBUG
+            perror("Error dispatching incoming packets");
+#endif
+
+            return -1;
+
+        default:
+            break;
+        }
+    }
+
+    serviceTime = enet_time_get();
+
+    timeout += serviceTime;
+
+    do
+    {
+        if (ENET_TIME_DIFFERENCE(serviceTime, bandwidthThrottleEpoch) >= ENET_HOST_BANDWIDTH_THROTTLE_INTERVAL)
+            enet_host_bandwidth_throttle(host);
+
+        switch (enet_protocol_send_outgoing_commands(host, event, 1))
+        {
+        case 1:
+            return 1;
+
+        case -1:
+#ifdef ENET_DEBUG
+            perror("Error sending outgoing packets");
+#endif
+
+            return -1;
+
+        default:
+            break;
+        }
+
+        switch (enet_protocol_receive_incoming_commands(host, event))
+        {
+        case 1:
+            return 1;
+
+        case -1:
+#ifdef ENET_DEBUG
+            perror("Error receiving incoming packets");
+#endif
+
+            return -1;
+
+        default:
+            break;
+        }
+
+        switch (enet_protocol_send_outgoing_commands(host, event, 1))
+        {
+        case 1:
+            return 1;
+
+        case -1:
+#ifdef ENET_DEBUG
+            perror("Error sending outgoing packets");
+#endif
+
+            return -1;
+
+        default:
+            break;
+        }
+
+        if (event != nullptr)
+        {
+            switch (enet_protocol_dispatch_incoming_commands(host, event))
+            {
+            case 1:
+                return 1;
+
+            case -1:
+#ifdef ENET_DEBUG
+                perror("Error dispatching incoming packets");
+#endif
+
+                return -1;
+
+            default:
+                break;
+            }
+        }
+
+        if (ENET_TIME_GREATER_EQUAL(host->serviceTime, timeout))
+            return 0;
+
+        do
+        {
+            host->serviceTime = enet_time_get();
+
+            if (ENET_TIME_GREATER_EQUAL(host->serviceTime, timeout))
+                return 0;
+
+            waitCondition = ENET_SOCKET_WAIT_RECEIVE | ENET_SOCKET_WAIT_INTERRUPT;
+
+            if (enet_socket_wait(host->socket, &waitCondition, ENET_TIME_DIFFERENCE(timeout, host->serviceTime)) != 0)
+                return -1;
+        } while (waitCondition & ENET_SOCKET_WAIT_INTERRUPT);
+
+        host->serviceTime = enet_time_get();
+    } while (waitCondition & ENET_SOCKET_WAIT_RECEIVE);
+
+    return 0;
+}
+
 int enet_host_service(ENetHost* host, ENetEvent* event, enet_uint32 timeout)
 {
     enet_uint32 waitCondition;
@@ -1866,7 +2016,7 @@ int enet_host_service(ENetHost* host, ENetEvent* event, enet_uint32 timeout)
             break;
         }
 
-        if (event != NULL)
+        if (event != nullptr)
         {
             switch (enet_protocol_dispatch_incoming_commands(host, event))
             {

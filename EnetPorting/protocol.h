@@ -45,7 +45,7 @@ enum ENetProtocolCommand
 // 패킷에 대한 메타 데이터의 종류
 enum ENetProtocolFlag
 {
-	ENET_PROTOCOL_COMMAND_FLAG_ACKNOWLEDGE = (1 << 7),
+	ENET_PROTOCOL_COMMAND_FLAG_ACKNOWLEDGE = (1 << 7), // 이 플래그가 있다면, 다음에 받은 사람은 Ack를 보내줘야 한다
 	ENET_PROTOCOL_COMMAND_FLAG_UNSEQUENCED = (1 << 6),
 
 	ENET_PROTOCOL_HEADER_FLAG_COMPRESSED = (1 << 14),
@@ -186,6 +186,28 @@ union ENET_PACKED ENetProtocol
 	ENetProtocolBandwidthLimit bandwidthLimit;
 	ENetProtocolThrottleConfigure throttleConfigure;
 };
+
+static const size_t commandSizes[ENET_PROTOCOL_COMMAND_COUNT] =
+{
+	0,
+	sizeof(ENetProtocolAcknowledge),
+	sizeof(ENetProtocolConnect),
+	sizeof(ENetProtocolVerifyConnect),
+	sizeof(ENetProtocolDisconnect),
+	sizeof(ENetProtocolPing),
+	sizeof(ENetProtocolSendReliable),
+	sizeof(ENetProtocolSendUnreliable),
+	sizeof(ENetProtocolSendFragment),
+	sizeof(ENetProtocolSendUnsequenced),
+	sizeof(ENetProtocolBandwidthLimit),
+	sizeof(ENetProtocolThrottleConfigure),
+	sizeof(ENetProtocolSendFragment)
+};
+
+static void enet_protocol_notify_connect(class ENetHost* host, class ENetPeer* peer, class ENetEvent* event);
+static void enet_protocol_notify_disconnect(class ENetHost* host, class ENetPeer* peer, class ENetEvent* event);
+static void enet_protocol_remove_sent_unreliable_commands(class ENetPeer* peer, class ENetList* sentUnreliableCommands);
+
 
 #ifdef _MSC_VER
 #pragma pack(pop)

@@ -46,11 +46,11 @@ namespace {
 
 using namespace std;
 
-ENetPacket* enet_packet_create(const void* data, size_t dataLength, enet_uint32 flags)
+shared_ptr<ENetPacket> enet_packet_create(const void* data, size_t dataLength, enet_uint32 flags)
 {
-    ENetPacket* packet = (ENetPacket*)enet_malloc(sizeof(ENetPacket));
-    if (packet == NULL)
-        return NULL;
+    shared_ptr<ENetPacket> packet = make_shared<ENetPacket>();
+    if (packet == nullptr)
+        return nullptr;
 
     if (flags & ENET_PACKET_FLAG_NO_ALLOCATE)
         packet->data = (enet_uint8*)data;
@@ -78,17 +78,17 @@ ENetPacket* enet_packet_create(const void* data, size_t dataLength, enet_uint32 
     return packet;
 }
 
-void enet_packet_destroy(ENetPacket* packet)
+void enet_packet_destroy(shared_ptr<ENetPacket>& packet)
 {
     if (packet == nullptr)
         return;
 
     if (packet->freeCallback != nullptr)
-        (*packet->freeCallback) (packet);
+        (packet->freeCallback) (packet.get());
     if (!(packet->flags & ENET_PACKET_FLAG_NO_ALLOCATE) &&
         packet->data != nullptr)
         enet_free(packet->data);
-    enet_free(packet);
+    //enet_free(packet);
 }
 
 int enet_packet_resize(ENetPacket* packet, size_t dataLength)

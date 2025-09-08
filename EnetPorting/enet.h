@@ -16,6 +16,7 @@
 #include "callbacks.h"
 #include "protocol.h"
 #include "list.h"
+#include <memory>
 
 #define ENET_VERSION_MAJOR 1
 #define ENET_VERSION_MINOR 3
@@ -27,6 +28,8 @@
 #define ENET_VERSION ENET_VERSION_CREATE(ENET_VERSION_MAJOR, ENET_VERSION_MINOR, ENET_VERSION_PATCH)
 
 using ENetVersion = enet_uint32;
+using namespace ENetFunction;
+using namespace std;
 
 enum ENetSocketType
 {
@@ -89,7 +92,7 @@ struct ENetBuffer
     void* data;
 };
 
-typedef void (ENET_CALLBACK* ENetPacketFreeCallback) (struct _ENetPacket*);
+//using ENetPacketFreeCallback = TFunction<void(struct ENetPacket*)>;
 
 struct ENetAcknowledgement
 {
@@ -110,7 +113,7 @@ struct ENetOutgoingCommand
     enet_uint16  fragmentLength;
     enet_uint16  sendAttempts;
     ENetProtocol command;
-    ENetPacket* packet; // shared_ptr로 수정
+    std::shared_ptr<ENetPacket>     packet; // shared_ptr로 수정
 };
 
 struct ENetIncomingCommand
@@ -122,7 +125,7 @@ struct ENetIncomingCommand
     enet_uint32     fragmentCount;
     enet_uint32     fragmentsRemaining;
     enet_uint32*    fragments; // Buffer?
-    ENetPacket*     packet;
+    std::shared_ptr<ENetPacket>     packet;
 };
 
 // UDP 연결지향이 아니므로 State 정의
@@ -198,8 +201,9 @@ enum ENetPeerFlag
  *
  * No fields should be modified unless otherwise specified.
  */
-struct ENetPeer
+struct ENetPeer : public enable_shared_from_this<ENetPeer>
 {
+public:
     ENetListNode  dispatchList;
     ENetHost* host;
     enet_uint16   outgoingPeerID;
@@ -249,10 +253,10 @@ struct ENetPeer
     enet_uint32   reliableDataInTransit;
     enet_uint16   outgoingReliableSequenceNumber;
     ENetList      acknowledgements; // 
-    ENetList      sentReliableCommands; // 보낸? Reliable?
+    ENetList      sentReliableCommands; //  ? Reliable?
     ENetList      outgoingSendReliableCommands;  // 보낼 예정인 Reliable. Reliable은 잘 저장해둔다(또 보낼수도있으니)
     ENetList      outgoingCommands; // 보낼 예정(Unreliable?)
-    ENetList      dispatchedCommands; // receive한 commands
+    ENetList      dispatchedCommands; // receive한 commands 중에 실제로 Receive한 commands
     enet_uint16   flags;
     enet_uint16   reserved;
     enet_uint16   incomingUnsequencedGroup;
@@ -260,6 +264,45 @@ struct ENetPeer
     enet_uint32   unsequencedWindow[ENET_PEER_UNSEQUENCED_WINDOW_SIZE / 32];
     enet_uint32   eventData;
     size_t        totalWaitingData;
+
+public:
+    virtual void Reset();
+    void ResetQueues();
+
+    virtual void OnConnect();
+    virtual void OnDisconnect();
+    // Peer의 Receive - 해당 Peer로 부터 받은것
+    // 내부에서 처리하지 않고 바깥으로 Packet을 넘겨준다
+    virtual std::shared_ptr<ENetPacket> OnReceive(enet_uint8* channelID);
+    // Peer의 Send - 해당 Peer에게 보내는 것
+    int SendPacket(enet_uint8 channelID, std::shared_ptr<ENetPacket> packet);
+
+public:
+    void SendPing();
+    void SetPingInterval(enet_uint32 newPingInterval);
+    void SetTimeout(enet_uint32 timeoutLimit, enet_uint32 timeoutMinimum, enet_uint32 timeoutMaximum);
+    // Commands
+public:
+    ENetProtocolCommand RemoveSentReliableCommand(enet_uint16 reliableSequenceNumber, enet_uint8 channelID);
+    
+    void ResetOutgoingCommands(ENetList* queue);
+    ENetOutgoingCommand* QueueOutgoingCommand(const ENetProtocol* command, std::shared_ptr<ENetPacket> packet, enet_uint32 offset, enet_uint16 length);
+    ENetIncomingCommand* QueueIncomingCommand(const ENetProtocol* command, const void* data, size_t dataLength, enet_uint32 flags, enet_uint32 fragmentCount);
+    void SetupOutgoingCommand(ENetOutgoingCommand* outgoingCommand);
+    static void ResetIncomingCommands(ENetList* queue);
+    static void RemoveIncomingCommands(ENetList* queue, ENetList::iterator startCommand, ENetList::iterator endCommand, ENetIncomingCommand* excludeCommand);
+
+    static ENetOutgoingCommand* FindSentReliableCommand(ENetList* list, enet_uint16 reliableSequenceNumber, enet_uint8 channelID);
+    ENetAcknowledgement* QueueAcknowledgement(const ENetProtocol* command, enet_uint16 sentTime);
+    void DispatchIncomingUnReliableCommands(ENetChannel* channel, ENetIncomingCommand* queuedCommand);
+    void DispatchIncomingReliableCommands(ENetChannel* channel, ENetIncomingCommand* queuedCommand);
+
+public:
+    void DisconnectNow(enet_uint32 data);
+    void Disconnect(enet_uint32 data);
+    void DisconnectLater(enet_uint32 data);
+
+    bool HasOutgoingCommands();
 };
 
 /** An ENet packet compressor for compressing UDP packets before socket sends or receives.
@@ -269,19 +312,19 @@ struct ENetCompressor
     /** Context data for the compressor. Must be non-NULL. */
     void* context;
     /** Compresses from inBuffers[0:inBufferCount-1], containing inLimit bytes, to outData, outputting at most outLimit bytes. Should return 0 on failure. */
-    size_t(ENET_CALLBACK* compress) (void* context, const ENetBuffer* inBuffers, size_t inBufferCount, size_t inLimit, enet_uint8* outData, size_t outLimit);
+    TFunction<size_t(void*, const ENetBuffer*, size_t, size_t, enet_uint8, size_t)> compress;
     /** Decompresses from inData, containing inLimit bytes, to outData, outputting at most outLimit bytes. Should return 0 on failure. */
-    size_t(ENET_CALLBACK* decompress) (void* context, const enet_uint8* inData, size_t inLimit, enet_uint8* outData, size_t outLimit);
+    TFunction<size_t(void*, const enet_uint8*, size_t, enet_uint8*, size_t)> decompress;
     /** Destroys the context when compression is disabled or the host is destroyed. May be NULL. */
-    void (ENET_CALLBACK* destroy) (void* context);
+    TFunction<void(void*)> destroy;
 };
 
 struct ENetBuffer;
 /** Callback that computes the checksum of the data held in buffers[0:bufferCount-1] */
-typedef enet_uint32(ENET_CALLBACK* ENetChecksumCallback) (const ENetBuffer* buffers, size_t bufferCount);
+using ENetChecksumCallback = TFunction<enet_uint32(const ENetBuffer*, size_t)>;
 
 /** Callback for intercepting received raw UDP packets. Should return 1 to intercept, 0 to ignore, or -1 to propagate an error. */
-typedef int (ENET_CALLBACK* ENetInterceptCallback) (struct ENetHost* host, struct ENetEvent* event);
+using ENetInterceptCallback = TFunction<int(class ENetHost*, class ENetEvent*)>;
 
 /** An ENet host for communicating with peers.
   *
@@ -312,8 +355,9 @@ public:
     SOCKET      socket;
 };
 
-struct ENetHost
+class ENetHost : public std::enable_shared_from_this<ENetHost>
 {
+public:
     ENetSocket           socket;
     ENetAddress          address;                     /**< Internet address of the host */
     enet_uint32          incomingBandwidth;           /**< downstream bandwidth of the host */
@@ -351,6 +395,40 @@ struct ENetHost
     size_t               maximumPacketSize;           /**< the maximum allowable packet size that may be sent or received on a peer */
     size_t               maximumWaitingData;          /**< the maximum aggregate amount of buffer space a peer may use waiting for packets to be delivered */
 
+public:
+    int receive_incoming_commands(ENetEvent* event);
+    int handle_incoming_commands(ENetEvent* event);
+
+public:
+    void Initialize();
+public:
+    void broadcast(enet_uint8 channelID, shared_ptr<ENetPacket> packet);
+    void flush();
+    void dispatch_state(ENetPeer* peer, ENetPeerState state);
+    void change_state(ENetPeer* peer, ENetPeerState state);
+
+public:
+    int check_events(ENetEvent* event);
+    bool service(ENetEvent* event, enet_uint32 timeout);
+    void compress(const ENetCompressor* compressor);
+
+    void channel_limit(size_t channelLimit);
+    void bandwidth_limit(enet_uint32 incomingBandwidth, enet_uint32 outgoingBandwidth);
+    void bandwidth_throttle();
+
+private:
+    bool handle_acknowledge(ENetEvent* event, ENetPeer* peer, const ENetProtocol* command);
+    ENetPeer* handle_connect(ENetProtocolHeader* header, ENetProtocol* command);
+    bool handle_verify_connect(ENetEvent* event, ENetPeer* peer, const ENetProtocol* command);
+    bool handle_disconnect(ENetPeer* peer, const ENetProtocol* command);
+    bool handle_ping(ENetPeer* peer, const ENetProtocol* command);
+    bool handle_send_reliable(ENetPeer* peer, const ENetProtocol* command, enet_uint8** currentData);
+    bool handle_send_unreliable(ENetPeer* peer, const ENetProtocol* command, enet_uint8** currentData);
+    bool handle_send_unsequenced(ENetPeer* peer, const ENetProtocol* command, enet_uint8** currentData);
+    bool handle_send_fragment(ENetPeer* peer, const ENetProtocol* command, enet_uint8** currentData);
+    bool handle_bandwidth_limit(ENetPeer* peer, const ENetProtocol* command);
+    bool handle_throttle_configure(ENetPeer* peer, const ENetProtocol* command);
+    bool handle_send_unreliable_fragment(ENetPeer* peer, const ENetProtocol* command, enet_uint8** currentData);
 };
 
 /**
@@ -388,14 +466,16 @@ enum ENetEventType
  * An ENet event as returned by enet_host_service().
 
    @sa enet_host_service
+   
+   멀티스레드 관리할거면 Event를 관리하면 될듯?
  */
-typedef struct ENetEvent
+struct ENetEvent
 {
-    ENetEventType        type;      /**< type of the event */
-    ENetPeer*            peer;      /**< peer that generated a connect, disconnect or receive event */
-    enet_uint8           channelID; /**< channel on the peer that generated the event, if appropriate */
-    enet_uint32          data;      /**< data associated with the event, if appropriate */
-    ENetPacket*          packet;    /**< packet associated with the event, if appropriate */
+    ENetEventType                        type;      /**< type of the event */
+    ENetPeer*                            peer;      /**< peer that generated a connect, disconnect or receive event */
+    enet_uint8                           channelID; /**< channel on the peer that generated the event, if appropriate */
+    enet_uint32                          data;      /**< data associated with the event, if appropriate */
+    std::shared_ptr<ENetPacket>          packet;    /**< packet associated with the event, if appropriate */
 };
 
 
@@ -408,7 +488,7 @@ typedef struct ENetEvent
           @param inits user-overridden callbacks where any NULL callbacks will use ENet's defaults
           @returns 0 on success, < 0 on failure
         */
-        ENET_API int enet_initialize_with_callbacks(ENetVersion version, const ENetCallbacks* inits);
+        ENET_API int enet_initialize_with_callbacks(ENetVersion version, ENetCallbacks* inits);
 
         /**
           Shuts down ENet globally.  Should be called when a program that has
@@ -502,8 +582,8 @@ typedef struct ENetEvent
 
         /** @} */
 
-        ENET_API ENetPacket* enet_packet_create(const void*, size_t, enet_uint32);
-        ENET_API void         enet_packet_destroy(ENetPacket*);
+        ENET_API std::shared_ptr<ENetPacket> enet_packet_create(const void*, size_t, enet_uint32);
+        ENET_API void         enet_packet_destroy(std::shared_ptr<ENetPacket>);
         ENET_API int          enet_packet_resize(ENetPacket*, size_t);
         ENET_API enet_uint32  enet_crc32(const ENetBuffer*, size_t);
 
@@ -519,16 +599,16 @@ typedef struct ENetEvent
         ENET_API void       enet_host_channel_limit(ENetHost*, size_t);
         ENET_API void       enet_host_bandwidth_limit(ENetHost*, enet_uint32, enet_uint32);
 
-        ENET_API int                 enet_peer_send(ENetPeer*, enet_uint8, ENetPacket*);
-        ENET_API ENetPacket* enet_peer_receive(ENetPeer*, enet_uint8* channelID);
-        ENET_API void                enet_peer_ping(ENetPeer*);
-        ENET_API void                enet_peer_ping_interval(ENetPeer*, enet_uint32);
-        ENET_API void                enet_peer_timeout(ENetPeer*, enet_uint32, enet_uint32, enet_uint32);
-        ENET_API void                enet_peer_reset(ENetPeer*);
-        ENET_API void                enet_peer_disconnect(ENetPeer*, enet_uint32);
-        ENET_API void                enet_peer_disconnect_now(ENetPeer*, enet_uint32);
-        ENET_API void                enet_peer_disconnect_later(ENetPeer*, enet_uint32);
-        ENET_API void                enet_peer_throttle_configure(ENetPeer*, enet_uint32, enet_uint32, enet_uint32);
+        ENET_API int                            enet_peer_send(ENetPeer*, enet_uint8, std::shared_ptr<ENetPacket>);
+        ENET_API std::shared_ptr<ENetPacket>    enet_peer_receive(ENetPeer*, enet_uint8* channelID);
+        ENET_API void                           enet_peer_ping(ENetPeer*);
+        ENET_API void                           enet_peer_ping_interval(ENetPeer*, enet_uint32);
+        ENET_API void                           enet_peer_timeout(ENetPeer*, enet_uint32, enet_uint32, enet_uint32);
+        ENET_API void                           enet_peer_reset(ENetPeer*);
+        ENET_API void                           enet_peer_disconnect(ENetPeer*, enet_uint32);
+        ENET_API void                           enet_peer_disconnect_now(ENetPeer*, enet_uint32);
+        ENET_API void                           enet_peer_disconnect_later(ENetPeer*, enet_uint32);
+        ENET_API void                           enet_peer_throttle_configure(ENetPeer*, enet_uint32, enet_uint32, enet_uint32);
 
         ENET_API void* enet_range_coder_create(void);
         ENET_API void   enet_range_coder_destroy(void*);
@@ -544,7 +624,7 @@ typedef struct ENetEvent
     extern void                  enet_peer_reset_queues(ENetPeer*);
     extern int                   enet_peer_has_outgoing_commands(ENetPeer*);
     extern void                  enet_peer_setup_outgoing_command(ENetPeer*, ENetOutgoingCommand*);
-    extern ENetOutgoingCommand* enet_peer_queue_outgoing_command(ENetPeer*, const ENetProtocol*, ENetPacket*, enet_uint32, enet_uint16);
+    extern ENetOutgoingCommand* enet_peer_queue_outgoing_command(ENetPeer*, const ENetProtocol*, std::shared_ptr<ENetPacket>, enet_uint32, enet_uint16);
     extern ENetIncomingCommand* enet_peer_queue_incoming_command(ENetPeer*, const ENetProtocol*, const void*, size_t, enet_uint32, enet_uint32);
     extern ENetAcknowledgement* enet_peer_queue_acknowledgement(ENetPeer*, const ENetProtocol*, enet_uint16);
     extern void                  enet_peer_dispatch_incoming_unreliable_commands(ENetPeer*, ENetChannel*, ENetIncomingCommand*);
@@ -554,4 +634,14 @@ typedef struct ENetEvent
 
 
     extern size_t enet_protocol_command_size(enet_uint8);
+
+class ENetService
+{
+public:
+    ENetHost* enet_host_create(const ENetAddress* address, size_t peerCount, size_t channelLimit, enet_uint32 incomingBandwidth, enet_uint32 outgoingBandwidth);
+
+
+private:
+    ENetHost* host;
+};
 #endif /* __ENET_ENET_H__ */
